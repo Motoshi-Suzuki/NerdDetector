@@ -17,6 +17,17 @@
 		1D4FBCDA269BDEEB00328159 /* UserAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4FBCD9269BDEEB00328159 /* UserAttribute.swift */; };
 		1D4FBCDC269C115400328159 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4FBCDB269C115400328159 /* HomeView.swift */; };
 		1D4FBCDE269D2D9A00328159 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4FBCDD269D2D9A00328159 /* ImagePicker.swift */; };
+		1D717F7A26A1147F00E17189 /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D717F7926A1147F00E17189 /* CameraPicker.swift */; };
+		1D717F8626A1CA9D00E17189 /* 8.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D717F7C26A1CA9D00E17189 /* 8.json */; };
+		1D717F8726A1CA9D00E17189 /* 2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D717F7D26A1CA9D00E17189 /* 2.json */; };
+		1D717F8826A1CA9D00E17189 /* 0.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D717F7E26A1CA9D00E17189 /* 0.json */; };
+		1D717F8926A1CA9D00E17189 /* 1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D717F7F26A1CA9D00E17189 /* 1.json */; };
+		1D717F8A26A1CA9D00E17189 /* 7.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D717F8026A1CA9D00E17189 /* 7.json */; };
+		1D717F8B26A1CA9D00E17189 /* 9.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D717F8126A1CA9D00E17189 /* 9.json */; };
+		1D717F8C26A1CA9D00E17189 /* 3.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D717F8226A1CA9D00E17189 /* 3.json */; };
+		1D717F8D26A1CA9D00E17189 /* 4.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D717F8326A1CA9D00E17189 /* 4.json */; };
+		1D717F8E26A1CA9D00E17189 /* 6.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D717F8426A1CA9D00E17189 /* 6.json */; };
+		1D717F8F26A1CA9D00E17189 /* 5.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D717F8526A1CA9D00E17189 /* 5.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +43,17 @@
 		1D4FBCD9269BDEEB00328159 /* UserAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAttribute.swift; sourceTree = "<group>"; };
 		1D4FBCDB269C115400328159 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1D4FBCDD269D2D9A00328159 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		1D717F7926A1147F00E17189 /* CameraPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
+		1D717F7C26A1CA9D00E17189 /* 8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 8.json; path = Image/LotieFiles/8.json; sourceTree = SOURCE_ROOT; };
+		1D717F7D26A1CA9D00E17189 /* 2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 2.json; path = Image/LotieFiles/2.json; sourceTree = SOURCE_ROOT; };
+		1D717F7E26A1CA9D00E17189 /* 0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 0.json; path = Image/LotieFiles/0.json; sourceTree = SOURCE_ROOT; };
+		1D717F7F26A1CA9D00E17189 /* 1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 1.json; path = Image/LotieFiles/1.json; sourceTree = SOURCE_ROOT; };
+		1D717F8026A1CA9D00E17189 /* 7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 7.json; path = Image/LotieFiles/7.json; sourceTree = SOURCE_ROOT; };
+		1D717F8126A1CA9D00E17189 /* 9.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 9.json; path = Image/LotieFiles/9.json; sourceTree = SOURCE_ROOT; };
+		1D717F8226A1CA9D00E17189 /* 3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 3.json; path = Image/LotieFiles/3.json; sourceTree = SOURCE_ROOT; };
+		1D717F8326A1CA9D00E17189 /* 4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 4.json; path = Image/LotieFiles/4.json; sourceTree = SOURCE_ROOT; };
+		1D717F8426A1CA9D00E17189 /* 6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 6.json; path = Image/LotieFiles/6.json; sourceTree = SOURCE_ROOT; };
+		1D717F8526A1CA9D00E17189 /* 5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 5.json; path = Image/LotieFiles/5.json; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +90,11 @@
 				1D4FBCC52699772500328159 /* SceneDelegate.swift */,
 				1D4FBCC72699772500328159 /* SelectionView.swift */,
 				1D4FBCDB269C115400328159 /* HomeView.swift */,
-				1D4FBCD9269BDEEB00328159 /* UserAttribute.swift */,
 				1D4FBCDD269D2D9A00328159 /* ImagePicker.swift */,
+				1D717F7926A1147F00E17189 /* CameraPicker.swift */,
+				1D4FBCD9269BDEEB00328159 /* UserAttribute.swift */,
 				1D3A878E269ED53400F57AC9 /* ButtonDesign.swift */,
-				1D4FBCC92699772700328159 /* Assets.xcassets */,
+				1D717F7B26A1CA7700E17189 /* Assets */,
 				1D4FBCCE2699772700328159 /* LaunchScreen.storyboard */,
 				1D4FBCD12699772700328159 /* Info.plist */,
 				1D4FBCCB2699772700328159 /* Preview Content */,
@@ -85,6 +108,24 @@
 				1D4FBCCC2699772700328159 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1D717F7B26A1CA7700E17189 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				1D4FBCC92699772700328159 /* Assets.xcassets */,
+				1D717F7E26A1CA9D00E17189 /* 0.json */,
+				1D717F7F26A1CA9D00E17189 /* 1.json */,
+				1D717F7D26A1CA9D00E17189 /* 2.json */,
+				1D717F8226A1CA9D00E17189 /* 3.json */,
+				1D717F8326A1CA9D00E17189 /* 4.json */,
+				1D717F8526A1CA9D00E17189 /* 5.json */,
+				1D717F8426A1CA9D00E17189 /* 6.json */,
+				1D717F8026A1CA9D00E17189 /* 7.json */,
+				1D717F7C26A1CA9D00E17189 /* 8.json */,
+				1D717F8126A1CA9D00E17189 /* 9.json */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,8 +185,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D717F8F26A1CA9D00E17189 /* 5.json in Resources */,
+				1D717F8E26A1CA9D00E17189 /* 6.json in Resources */,
+				1D717F8826A1CA9D00E17189 /* 0.json in Resources */,
+				1D717F8D26A1CA9D00E17189 /* 4.json in Resources */,
+				1D717F8726A1CA9D00E17189 /* 2.json in Resources */,
 				1D4FBCD02699772700328159 /* LaunchScreen.storyboard in Resources */,
+				1D717F8B26A1CA9D00E17189 /* 9.json in Resources */,
 				1D4FBCCD2699772700328159 /* Preview Assets.xcassets in Resources */,
+				1D717F8C26A1CA9D00E17189 /* 3.json in Resources */,
+				1D717F8626A1CA9D00E17189 /* 8.json in Resources */,
+				1D717F8A26A1CA9D00E17189 /* 7.json in Resources */,
+				1D717F8926A1CA9D00E17189 /* 1.json in Resources */,
 				1D4FBCCA2699772700328159 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +212,7 @@
 				1D4FBCC42699772500328159 /* AppDelegate.swift in Sources */,
 				1D4FBCC62699772500328159 /* SceneDelegate.swift in Sources */,
 				1D3A878F269ED53400F57AC9 /* ButtonDesign.swift in Sources */,
+				1D717F7A26A1147F00E17189 /* CameraPicker.swift in Sources */,
 				1D4FBCDE269D2D9A00328159 /* ImagePicker.swift in Sources */,
 				1D4FBCDC269C115400328159 /* HomeView.swift in Sources */,
 				1D4FBCC82699772500328159 /* SelectionView.swift in Sources */,

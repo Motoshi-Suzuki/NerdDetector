@@ -11,7 +11,9 @@ import PhotosUI
 struct HomeView: View {
     
     @ObservedObject var imageClass = ImageClass()
+    @State private var showingActionSheet = false
     @State private var showingImagePicker = false
+    @State private var showingCameraPicker = false
     @Environment(\.presentationMode) var presentation
     
     var body: some View {
@@ -20,7 +22,10 @@ struct HomeView: View {
                 .ignoresSafeArea()
             
             VStack(spacing: 40) {
-                ImageView(image: $imageClass.image, showingImagePicker: $showingImagePicker)
+                ImageView(image: $imageClass.image,
+                          showingActionSheet: $showingActionSheet,
+                          showingImagePicker: $showingImagePicker,
+                          showingCameraPicker: $showingCameraPicker)
                 
                 VStack(spacing: 30) {
                     Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
@@ -43,7 +48,9 @@ struct HomeView: View {
 struct ImageView: View {
     
     @Binding var image: Image?
+    @Binding var showingActionSheet: Bool
     @Binding var showingImagePicker: Bool
+    @Binding var showingCameraPicker: Bool
     
     var body: some View {
         ZStack {
@@ -63,10 +70,26 @@ struct ImageView: View {
             }
         }
         .onTapGesture {
-            self.showingImagePicker = true
+            self.showingActionSheet = true
         }
+        .actionSheet(isPresented: $showingActionSheet, content: {
+            ActionSheet(title: Text("Select an option below"),
+                        message: Text("Choose a picture from Photo Library or take a new picture."),
+                        buttons: [
+                            .default(Text("Photo Library"), action: {
+                                self.showingImagePicker = true
+                            }),
+                            .default(Text("Camera"), action: {
+                                self.showingCameraPicker = true
+                            }),
+                            .cancel()
+                        ])
+        })
         .sheet(isPresented: $showingImagePicker, content: {
             ImagePicker(image: $image)
+        })
+        .sheet(isPresented: $showingCameraPicker, content: {
+            CameraPicker(image: $image)
         })
     }
 }
