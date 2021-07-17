@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,16 +18,19 @@
 		1D4FBCDC269C115400328159 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4FBCDB269C115400328159 /* HomeView.swift */; };
 		1D4FBCDE269D2D9A00328159 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4FBCDD269D2D9A00328159 /* ImagePicker.swift */; };
 		1D717F7A26A1147F00E17189 /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D717F7926A1147F00E17189 /* CameraPicker.swift */; };
-		1D717F8626A1CA9D00E17189 /* 8.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D717F7C26A1CA9D00E17189 /* 8.json */; };
-		1D717F8726A1CA9D00E17189 /* 2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D717F7D26A1CA9D00E17189 /* 2.json */; };
-		1D717F8826A1CA9D00E17189 /* 0.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D717F7E26A1CA9D00E17189 /* 0.json */; };
-		1D717F8926A1CA9D00E17189 /* 1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D717F7F26A1CA9D00E17189 /* 1.json */; };
-		1D717F8A26A1CA9D00E17189 /* 7.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D717F8026A1CA9D00E17189 /* 7.json */; };
-		1D717F8B26A1CA9D00E17189 /* 9.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D717F8126A1CA9D00E17189 /* 9.json */; };
-		1D717F8C26A1CA9D00E17189 /* 3.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D717F8226A1CA9D00E17189 /* 3.json */; };
-		1D717F8D26A1CA9D00E17189 /* 4.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D717F8326A1CA9D00E17189 /* 4.json */; };
-		1D717F8E26A1CA9D00E17189 /* 6.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D717F8426A1CA9D00E17189 /* 6.json */; };
-		1D717F8F26A1CA9D00E17189 /* 5.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D717F8526A1CA9D00E17189 /* 5.json */; };
+		1D9882E626A2781F00803E1A /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9882E526A2781F00803E1A /* LottieView.swift */; };
+		1D9882E826A278DA00803E1A /* AnalysingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9882E726A278DA00803E1A /* AnalysingView.swift */; };
+		1D9882F326A2C46500803E1A /* 9.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D9882E926A2C46400803E1A /* 9.json */; };
+		1D9882F426A2C46500803E1A /* 0.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D9882EA26A2C46400803E1A /* 0.json */; };
+		1D9882F526A2C46500803E1A /* 2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D9882EB26A2C46400803E1A /* 2.json */; };
+		1D9882F626A2C46500803E1A /* 7.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D9882EC26A2C46400803E1A /* 7.json */; };
+		1D9882F726A2C46500803E1A /* 5.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D9882ED26A2C46400803E1A /* 5.json */; };
+		1D9882F826A2C46500803E1A /* 8.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D9882EE26A2C46400803E1A /* 8.json */; };
+		1D9882F926A2C46500803E1A /* 4.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D9882EF26A2C46400803E1A /* 4.json */; };
+		1D9882FA26A2C46500803E1A /* 6.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D9882F026A2C46500803E1A /* 6.json */; };
+		1D9882FB26A2C46500803E1A /* 1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D9882F126A2C46500803E1A /* 1.json */; };
+		1D9882FC26A2C46500803E1A /* 3.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D9882F226A2C46500803E1A /* 3.json */; };
+		4BB7780F9AA377B7DB2F07C8 /* Pods_NerdDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7AA3BA0A87A5C9AC886B4F6 /* Pods_NerdDetector.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,16 +47,21 @@
 		1D4FBCDB269C115400328159 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1D4FBCDD269D2D9A00328159 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		1D717F7926A1147F00E17189 /* CameraPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
-		1D717F7C26A1CA9D00E17189 /* 8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 8.json; path = Image/LotieFiles/8.json; sourceTree = SOURCE_ROOT; };
-		1D717F7D26A1CA9D00E17189 /* 2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 2.json; path = Image/LotieFiles/2.json; sourceTree = SOURCE_ROOT; };
-		1D717F7E26A1CA9D00E17189 /* 0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 0.json; path = Image/LotieFiles/0.json; sourceTree = SOURCE_ROOT; };
-		1D717F7F26A1CA9D00E17189 /* 1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 1.json; path = Image/LotieFiles/1.json; sourceTree = SOURCE_ROOT; };
-		1D717F8026A1CA9D00E17189 /* 7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 7.json; path = Image/LotieFiles/7.json; sourceTree = SOURCE_ROOT; };
-		1D717F8126A1CA9D00E17189 /* 9.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 9.json; path = Image/LotieFiles/9.json; sourceTree = SOURCE_ROOT; };
-		1D717F8226A1CA9D00E17189 /* 3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 3.json; path = Image/LotieFiles/3.json; sourceTree = SOURCE_ROOT; };
-		1D717F8326A1CA9D00E17189 /* 4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 4.json; path = Image/LotieFiles/4.json; sourceTree = SOURCE_ROOT; };
-		1D717F8426A1CA9D00E17189 /* 6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 6.json; path = Image/LotieFiles/6.json; sourceTree = SOURCE_ROOT; };
-		1D717F8526A1CA9D00E17189 /* 5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 5.json; path = Image/LotieFiles/5.json; sourceTree = SOURCE_ROOT; };
+		1D9882E526A2781F00803E1A /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		1D9882E726A278DA00803E1A /* AnalysingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysingView.swift; sourceTree = "<group>"; };
+		1D9882E926A2C46400803E1A /* 9.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 9.json; path = Image/LottieFiles/9.json; sourceTree = SOURCE_ROOT; };
+		1D9882EA26A2C46400803E1A /* 0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 0.json; path = Image/LottieFiles/0.json; sourceTree = SOURCE_ROOT; };
+		1D9882EB26A2C46400803E1A /* 2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 2.json; path = Image/LottieFiles/2.json; sourceTree = SOURCE_ROOT; };
+		1D9882EC26A2C46400803E1A /* 7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 7.json; path = Image/LottieFiles/7.json; sourceTree = SOURCE_ROOT; };
+		1D9882ED26A2C46400803E1A /* 5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 5.json; path = Image/LottieFiles/5.json; sourceTree = SOURCE_ROOT; };
+		1D9882EE26A2C46400803E1A /* 8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 8.json; path = Image/LottieFiles/8.json; sourceTree = SOURCE_ROOT; };
+		1D9882EF26A2C46400803E1A /* 4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 4.json; path = Image/LottieFiles/4.json; sourceTree = SOURCE_ROOT; };
+		1D9882F026A2C46500803E1A /* 6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 6.json; path = Image/LottieFiles/6.json; sourceTree = SOURCE_ROOT; };
+		1D9882F126A2C46500803E1A /* 1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 1.json; path = Image/LottieFiles/1.json; sourceTree = SOURCE_ROOT; };
+		1D9882F226A2C46500803E1A /* 3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 3.json; path = Image/LottieFiles/3.json; sourceTree = SOURCE_ROOT; };
+		D80760315FB6B49313DBE6A3 /* Pods-NerdDetector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NerdDetector.debug.xcconfig"; path = "Target Support Files/Pods-NerdDetector/Pods-NerdDetector.debug.xcconfig"; sourceTree = "<group>"; };
+		E7AA3BA0A87A5C9AC886B4F6 /* Pods_NerdDetector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NerdDetector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9D04D2A059F4A195108D3A7 /* Pods-NerdDetector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NerdDetector.release.xcconfig"; path = "Target Support Files/Pods-NerdDetector/Pods-NerdDetector.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,17 +69,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BB7780F9AA377B7DB2F07C8 /* Pods_NerdDetector.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D1E2B7B98F16DA29B953C4A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D80760315FB6B49313DBE6A3 /* Pods-NerdDetector.debug.xcconfig */,
+				F9D04D2A059F4A195108D3A7 /* Pods-NerdDetector.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		1D4FBCB72699772500328159 = {
 			isa = PBXGroup;
 			children = (
 				1D4FBCC22699772500328159 /* NerdDetector */,
 				1D4FBCC12699772500328159 /* Products */,
+				1D1E2B7B98F16DA29B953C4A /* Pods */,
+				31C7DE0CB207493ECC283FB1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,8 +110,10 @@
 				1D4FBCC52699772500328159 /* SceneDelegate.swift */,
 				1D4FBCC72699772500328159 /* SelectionView.swift */,
 				1D4FBCDB269C115400328159 /* HomeView.swift */,
+				1D9882E726A278DA00803E1A /* AnalysingView.swift */,
 				1D4FBCDD269D2D9A00328159 /* ImagePicker.swift */,
 				1D717F7926A1147F00E17189 /* CameraPicker.swift */,
+				1D9882E526A2781F00803E1A /* LottieView.swift */,
 				1D4FBCD9269BDEEB00328159 /* UserAttribute.swift */,
 				1D3A878E269ED53400F57AC9 /* ButtonDesign.swift */,
 				1D717F7B26A1CA7700E17189 /* Assets */,
@@ -114,18 +136,26 @@
 			isa = PBXGroup;
 			children = (
 				1D4FBCC92699772700328159 /* Assets.xcassets */,
-				1D717F7E26A1CA9D00E17189 /* 0.json */,
-				1D717F7F26A1CA9D00E17189 /* 1.json */,
-				1D717F7D26A1CA9D00E17189 /* 2.json */,
-				1D717F8226A1CA9D00E17189 /* 3.json */,
-				1D717F8326A1CA9D00E17189 /* 4.json */,
-				1D717F8526A1CA9D00E17189 /* 5.json */,
-				1D717F8426A1CA9D00E17189 /* 6.json */,
-				1D717F8026A1CA9D00E17189 /* 7.json */,
-				1D717F7C26A1CA9D00E17189 /* 8.json */,
-				1D717F8126A1CA9D00E17189 /* 9.json */,
+				1D9882EA26A2C46400803E1A /* 0.json */,
+				1D9882F126A2C46500803E1A /* 1.json */,
+				1D9882EB26A2C46400803E1A /* 2.json */,
+				1D9882F226A2C46500803E1A /* 3.json */,
+				1D9882EF26A2C46400803E1A /* 4.json */,
+				1D9882ED26A2C46400803E1A /* 5.json */,
+				1D9882F026A2C46500803E1A /* 6.json */,
+				1D9882EC26A2C46400803E1A /* 7.json */,
+				1D9882EE26A2C46400803E1A /* 8.json */,
+				1D9882E926A2C46400803E1A /* 9.json */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		31C7DE0CB207493ECC283FB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7AA3BA0A87A5C9AC886B4F6 /* Pods_NerdDetector.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D4FBCD42699772700328159 /* Build configuration list for PBXNativeTarget "NerdDetector" */;
 			buildPhases = (
+				FC8A214DCB73E793EE8D89B9 /* [CP] Check Pods Manifest.lock */,
 				1D4FBCBC2699772500328159 /* Sources */,
 				1D4FBCBD2699772500328159 /* Frameworks */,
 				1D4FBCBE2699772500328159 /* Resources */,
+				DB30CC84146CF6C31EB6623C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,23 +217,65 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D717F8F26A1CA9D00E17189 /* 5.json in Resources */,
-				1D717F8E26A1CA9D00E17189 /* 6.json in Resources */,
-				1D717F8826A1CA9D00E17189 /* 0.json in Resources */,
-				1D717F8D26A1CA9D00E17189 /* 4.json in Resources */,
-				1D717F8726A1CA9D00E17189 /* 2.json in Resources */,
+				1D9882FC26A2C46500803E1A /* 3.json in Resources */,
+				1D9882F926A2C46500803E1A /* 4.json in Resources */,
+				1D9882F426A2C46500803E1A /* 0.json in Resources */,
 				1D4FBCD02699772700328159 /* LaunchScreen.storyboard in Resources */,
-				1D717F8B26A1CA9D00E17189 /* 9.json in Resources */,
+				1D9882F526A2C46500803E1A /* 2.json in Resources */,
+				1D9882F726A2C46500803E1A /* 5.json in Resources */,
 				1D4FBCCD2699772700328159 /* Preview Assets.xcassets in Resources */,
-				1D717F8C26A1CA9D00E17189 /* 3.json in Resources */,
-				1D717F8626A1CA9D00E17189 /* 8.json in Resources */,
-				1D717F8A26A1CA9D00E17189 /* 7.json in Resources */,
-				1D717F8926A1CA9D00E17189 /* 1.json in Resources */,
 				1D4FBCCA2699772700328159 /* Assets.xcassets in Resources */,
+				1D9882FB26A2C46500803E1A /* 1.json in Resources */,
+				1D9882F326A2C46500803E1A /* 9.json in Resources */,
+				1D9882F626A2C46500803E1A /* 7.json in Resources */,
+				1D9882F826A2C46500803E1A /* 8.json in Resources */,
+				1D9882FA26A2C46500803E1A /* 6.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DB30CC84146CF6C31EB6623C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NerdDetector/Pods-NerdDetector-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NerdDetector/Pods-NerdDetector-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NerdDetector/Pods-NerdDetector-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC8A214DCB73E793EE8D89B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NerdDetector-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D4FBCBC2699772500328159 /* Sources */ = {
@@ -210,6 +284,8 @@
 			files = (
 				1D4FBCDA269BDEEB00328159 /* UserAttribute.swift in Sources */,
 				1D4FBCC42699772500328159 /* AppDelegate.swift in Sources */,
+				1D9882E626A2781F00803E1A /* LottieView.swift in Sources */,
+				1D9882E826A278DA00803E1A /* AnalysingView.swift in Sources */,
 				1D4FBCC62699772500328159 /* SceneDelegate.swift in Sources */,
 				1D3A878F269ED53400F57AC9 /* ButtonDesign.swift in Sources */,
 				1D717F7A26A1147F00E17189 /* CameraPicker.swift in Sources */,
@@ -351,6 +427,7 @@
 		};
 		1D4FBCD52699772700328159 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D80760315FB6B49313DBE6A3 /* Pods-NerdDetector.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -372,6 +449,7 @@
 		};
 		1D4FBCD62699772700328159 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9D04D2A059F4A195108D3A7 /* Pods-NerdDetector.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

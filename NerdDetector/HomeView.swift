@@ -14,6 +14,7 @@ struct HomeView: View {
     @State private var showingActionSheet = false
     @State private var showingImagePicker = false
     @State private var showingCameraPicker = false
+    @State private var showingAnalysingView = false
     @Environment(\.presentationMode) var presentation
     
     var body: some View {
@@ -28,8 +29,10 @@ struct HomeView: View {
                           showingCameraPicker: $showingCameraPicker)
                 
                 VStack(spacing: 30) {
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                        CircleButton(text: "ANALYZE")
+                    Button(action: {
+                        showingAnalysingView = true
+                    }, label: {
+                        CircleButton(text: "ANALYSE")
                     })
                     
                     Button(action: {
@@ -40,6 +43,10 @@ struct HomeView: View {
                 }
             }
         }
+        .fullScreenCover(isPresented: $showingAnalysingView, content: {
+            AnalysingView()
+        })
+        
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle("Nerd Detector", displayMode: .inline)        
     }
