@@ -12,14 +12,14 @@ class UserAttribute: ObservableObject {
     
     func setAttribute(isNerdArray: [Bool]) {
         if isNerdArray == [true, false] {
-            isNerd = true
+            self.isNerd = true
             
         } else if isNerdArray == [false, true] {
-            isNerd = false
+            self.isNerd = false
         }
     }
     
-    func message(isNerd: Bool, messageForNerd: String, messageForNonNerd: String) {
+    func printMessage(isNerd: Bool, messageForNerd: String, messageForNonNerd: String) {
         switch isNerd {
         case true:
             print(messageForNerd)

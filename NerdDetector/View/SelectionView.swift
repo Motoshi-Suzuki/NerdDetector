@@ -35,7 +35,7 @@ struct SelectionView: View {
             if let isNerd = UserDefaults.standard.array(forKey: "isNerdArray") {
                 isNerdArray = isNerd as! [Bool]
                 userAttribute.setAttribute(isNerdArray: isNerdArray)
-                userAttribute.message(isNerd: userAttribute.isNerd,
+                userAttribute.printMessage(isNerd: userAttribute.isNerd,
                                       messageForNerd: "This user is Nerd.",
                                       messageForNonNerd: "This user is not Nerd.")
             } else {
@@ -100,7 +100,7 @@ struct OKButton: View {
                 let savedIsNerdArray = UserDefaults.standard.array(forKey: "isNerdArray")
                 if savedIsNerdArray == nil || isNerdArray != savedIsNerdArray as! [Bool] {
                     UserDefaults.standard.set(isNerdArray, forKey: "isNerdArray")
-                    userAttribute.message(isNerd: userAttribute.isNerd,
+                    userAttribute.printMessage(isNerd: userAttribute.isNerd,
                                           messageForNerd: "User saved his/her attribute as 'Nerd'.",
                                           messageForNonNerd: "User saved his/her attribute as 'Non-Nerd'.")
                 }

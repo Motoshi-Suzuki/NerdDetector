@@ -11,11 +11,12 @@ import PhotosUI
 struct HomeView: View {
     
     @ObservedObject var imageClass = ImageClass()
+    @Environment(\.presentationMode) var presentation
+    
     @State private var showingActionSheet = false
     @State private var showingImagePicker = false
     @State private var showingCameraPicker = false
     @State private var showingAnalysingView = false
-    @Environment(\.presentationMode) var presentation
     
     var body: some View {
         ZStack {
@@ -44,7 +45,7 @@ struct HomeView: View {
             }
         }
         .fullScreenCover(isPresented: $showingAnalysingView, content: {
-            AnalysingView()
+            AnalysingView(showingAnalysingView: $showingAnalysingView)
         })
         
         .navigationBarBackButtonHidden(true)
@@ -99,10 +100,6 @@ struct ImageView: View {
             CameraPicker(image: $image)
         })
     }
-}
-
-class ImageClass: ObservableObject {
-    @Published var image: Image?
 }
 
 struct HomeView_Previews: PreviewProvider {

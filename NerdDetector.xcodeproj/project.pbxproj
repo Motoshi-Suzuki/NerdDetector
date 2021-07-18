@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1D3A878F269ED53400F57AC9 /* ButtonDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3A878E269ED53400F57AC9 /* ButtonDesign.swift */; };
+		1D43A9BF26A3C9C500F81DFE /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43A9BE26A3C9C500F81DFE /* ResultView.swift */; };
+		1D43A9C426A4046900F81DFE /* Instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43A9C326A4046900F81DFE /* Instance.swift */; };
 		1D4FBCC42699772500328159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4FBCC32699772500328159 /* AppDelegate.swift */; };
 		1D4FBCC62699772500328159 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4FBCC52699772500328159 /* SceneDelegate.swift */; };
 		1D4FBCC82699772500328159 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4FBCC72699772500328159 /* SelectionView.swift */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		1D3A878E269ED53400F57AC9 /* ButtonDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDesign.swift; sourceTree = "<group>"; };
+		1D43A9BE26A3C9C500F81DFE /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		1D43A9C326A4046900F81DFE /* Instance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instance.swift; sourceTree = "<group>"; };
 		1D4FBCC02699772500328159 /* NerdDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NerdDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4FBCC32699772500328159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D4FBCC52699772500328159 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,48 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		1D43A9BB26A3C3A900F81DFE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D4FBCC32699772500328159 /* AppDelegate.swift */,
+				1D4FBCC52699772500328159 /* SceneDelegate.swift */,
+				1D4FBCD12699772700328159 /* Info.plist */,
+				1D4FBCCE2699772700328159 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1D43A9BC26A3C3EF00F81DFE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D4FBCC72699772500328159 /* SelectionView.swift */,
+				1D4FBCDB269C115400328159 /* HomeView.swift */,
+				1D9882E726A278DA00803E1A /* AnalysingView.swift */,
+				1D43A9BE26A3C9C500F81DFE /* ResultView.swift */,
+				1D3A878E269ED53400F57AC9 /* ButtonDesign.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D43A9BD26A3C5CD00F81DFE /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D4FBCD9269BDEEB00328159 /* UserAttribute.swift */,
+				1D4FBCDD269D2D9A00328159 /* ImagePicker.swift */,
+				1D717F7926A1147F00E17189 /* CameraPicker.swift */,
+				1D9882E526A2781F00803E1A /* LottieView.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		1D43A9C226A3F8A800F81DFE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D43A9C326A4046900F81DFE /* Instance.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1D4FBCB72699772500328159 = {
 			isa = PBXGroup;
 			children = (
@@ -106,19 +152,11 @@
 		1D4FBCC22699772500328159 /* NerdDetector */ = {
 			isa = PBXGroup;
 			children = (
-				1D4FBCC32699772500328159 /* AppDelegate.swift */,
-				1D4FBCC52699772500328159 /* SceneDelegate.swift */,
-				1D4FBCC72699772500328159 /* SelectionView.swift */,
-				1D4FBCDB269C115400328159 /* HomeView.swift */,
-				1D9882E726A278DA00803E1A /* AnalysingView.swift */,
-				1D4FBCDD269D2D9A00328159 /* ImagePicker.swift */,
-				1D717F7926A1147F00E17189 /* CameraPicker.swift */,
-				1D9882E526A2781F00803E1A /* LottieView.swift */,
-				1D4FBCD9269BDEEB00328159 /* UserAttribute.swift */,
-				1D3A878E269ED53400F57AC9 /* ButtonDesign.swift */,
+				1D43A9BB26A3C3A900F81DFE /* Supporting Files */,
+				1D43A9BC26A3C3EF00F81DFE /* View */,
+				1D43A9BD26A3C5CD00F81DFE /* View Model */,
+				1D43A9C226A3F8A800F81DFE /* Model */,
 				1D717F7B26A1CA7700E17189 /* Assets */,
-				1D4FBCCE2699772700328159 /* LaunchScreen.storyboard */,
-				1D4FBCD12699772700328159 /* Info.plist */,
 				1D4FBCCB2699772700328159 /* Preview Content */,
 			);
 			path = NerdDetector;
@@ -284,6 +322,7 @@
 			files = (
 				1D4FBCDA269BDEEB00328159 /* UserAttribute.swift in Sources */,
 				1D4FBCC42699772500328159 /* AppDelegate.swift in Sources */,
+				1D43A9BF26A3C9C500F81DFE /* ResultView.swift in Sources */,
 				1D9882E626A2781F00803E1A /* LottieView.swift in Sources */,
 				1D9882E826A278DA00803E1A /* AnalysingView.swift in Sources */,
 				1D4FBCC62699772500328159 /* SceneDelegate.swift in Sources */,
@@ -291,6 +330,7 @@
 				1D717F7A26A1147F00E17189 /* CameraPicker.swift in Sources */,
 				1D4FBCDE269D2D9A00328159 /* ImagePicker.swift in Sources */,
 				1D4FBCDC269C115400328159 /* HomeView.swift in Sources */,
+				1D43A9C426A4046900F81DFE /* Instance.swift in Sources */,
 				1D4FBCC82699772500328159 /* SelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,11 +475,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"NerdDetector/Preview Content\"";
 				DEVELOPMENT_TEAM = CS3KDAG7J6;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = NerdDetector/Info.plist;
+				INFOPLIST_FILE = "NerdDetector/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.motoshi-suzuki.NerdDetector";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -457,11 +498,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"NerdDetector/Preview Content\"";
 				DEVELOPMENT_TEAM = CS3KDAG7J6;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = NerdDetector/Info.plist;
+				INFOPLIST_FILE = "NerdDetector/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.motoshi-suzuki.NerdDetector";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
