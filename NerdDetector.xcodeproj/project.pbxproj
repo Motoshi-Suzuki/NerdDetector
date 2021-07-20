@@ -19,6 +19,8 @@
 		1D4FBCDA269BDEEB00328159 /* UserAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4FBCD9269BDEEB00328159 /* UserAttribute.swift */; };
 		1D4FBCDC269C115400328159 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4FBCDB269C115400328159 /* HomeView.swift */; };
 		1D4FBCDE269D2D9A00328159 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4FBCDD269D2D9A00328159 /* ImagePicker.swift */; };
+		1D53F9CF26A68D12001B8AED /* Rekognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D53F9CE26A68D12001B8AED /* Rekognition.swift */; };
+		1D53F9D126A6FCD2001B8AED /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D53F9D026A6FCD2001B8AED /* Extension.swift */; };
 		1D717F7A26A1147F00E17189 /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D717F7926A1147F00E17189 /* CameraPicker.swift */; };
 		1D9882E626A2781F00803E1A /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9882E526A2781F00803E1A /* LottieView.swift */; };
 		1D9882E826A278DA00803E1A /* AnalysingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9882E726A278DA00803E1A /* AnalysingView.swift */; };
@@ -33,6 +35,8 @@
 		1D9882FB26A2C46500803E1A /* 1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D9882F126A2C46500803E1A /* 1.json */; };
 		1D9882FC26A2C46500803E1A /* 3.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D9882F226A2C46500803E1A /* 3.json */; };
 		4BB7780F9AA377B7DB2F07C8 /* Pods_NerdDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7AA3BA0A87A5C9AC886B4F6 /* Pods_NerdDetector.framework */; };
+		74133691FB0D85375E2CF5FB /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 89927435DD11900E159EBC4C /* awsconfiguration.json */; };
+		9F60B00D8DFC37E99899D1EE /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BEBE43DBF227551F621C853 /* amplifyconfiguration.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,8 @@
 		1D4FBCD9269BDEEB00328159 /* UserAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAttribute.swift; sourceTree = "<group>"; };
 		1D4FBCDB269C115400328159 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1D4FBCDD269D2D9A00328159 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		1D53F9CE26A68D12001B8AED /* Rekognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rekognition.swift; sourceTree = "<group>"; };
+		1D53F9D026A6FCD2001B8AED /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		1D717F7926A1147F00E17189 /* CameraPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
 		1D9882E526A2781F00803E1A /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		1D9882E726A278DA00803E1A /* AnalysingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysingView.swift; sourceTree = "<group>"; };
@@ -63,6 +69,8 @@
 		1D9882F026A2C46500803E1A /* 6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 6.json; path = Image/LottieFiles/6.json; sourceTree = SOURCE_ROOT; };
 		1D9882F126A2C46500803E1A /* 1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 1.json; path = Image/LottieFiles/1.json; sourceTree = SOURCE_ROOT; };
 		1D9882F226A2C46500803E1A /* 3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 3.json; path = Image/LottieFiles/3.json; sourceTree = SOURCE_ROOT; };
+		2BEBE43DBF227551F621C853 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
+		89927435DD11900E159EBC4C /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		D80760315FB6B49313DBE6A3 /* Pods-NerdDetector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NerdDetector.debug.xcconfig"; path = "Target Support Files/Pods-NerdDetector/Pods-NerdDetector.debug.xcconfig"; sourceTree = "<group>"; };
 		E7AA3BA0A87A5C9AC886B4F6 /* Pods_NerdDetector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NerdDetector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D04D2A059F4A195108D3A7 /* Pods-NerdDetector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NerdDetector.release.xcconfig"; path = "Target Support Files/Pods-NerdDetector/Pods-NerdDetector.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B5A5E42266E0210A62D12B4 /* AmplifyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				89927435DD11900E159EBC4C /* awsconfiguration.json */,
+				2BEBE43DBF227551F621C853 /* amplifyconfiguration.json */,
+			);
+			name = AmplifyConfig;
+			sourceTree = "<group>";
+		};
 		1D1E2B7B98F16DA29B953C4A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				1D43A9C326A4046900F81DFE /* Instance.swift */,
+				1D53F9CE26A68D12001B8AED /* Rekognition.swift */,
+				1D53F9D026A6FCD2001B8AED /* Extension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,6 +157,7 @@
 				1D4FBCC12699772500328159 /* Products */,
 				1D1E2B7B98F16DA29B953C4A /* Pods */,
 				31C7DE0CB207493ECC283FB1 /* Frameworks */,
+				1B5A5E42266E0210A62D12B4 /* AmplifyConfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -268,6 +288,8 @@
 				1D9882F626A2C46500803E1A /* 7.json in Resources */,
 				1D9882F826A2C46500803E1A /* 8.json in Resources */,
 				1D9882FA26A2C46500803E1A /* 6.json in Resources */,
+				74133691FB0D85375E2CF5FB /* awsconfiguration.json in Resources */,
+				9F60B00D8DFC37E99899D1EE /* amplifyconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,11 +345,13 @@
 				1D4FBCDA269BDEEB00328159 /* UserAttribute.swift in Sources */,
 				1D4FBCC42699772500328159 /* AppDelegate.swift in Sources */,
 				1D43A9BF26A3C9C500F81DFE /* ResultView.swift in Sources */,
+				1D53F9CF26A68D12001B8AED /* Rekognition.swift in Sources */,
 				1D9882E626A2781F00803E1A /* LottieView.swift in Sources */,
 				1D9882E826A278DA00803E1A /* AnalysingView.swift in Sources */,
 				1D4FBCC62699772500328159 /* SceneDelegate.swift in Sources */,
 				1D3A878F269ED53400F57AC9 /* ButtonDesign.swift in Sources */,
 				1D717F7A26A1147F00E17189 /* CameraPicker.swift in Sources */,
+				1D53F9D126A6FCD2001B8AED /* Extension.swift in Sources */,
 				1D4FBCDE269D2D9A00328159 /* ImagePicker.swift in Sources */,
 				1D4FBCDC269C115400328159 /* HomeView.swift in Sources */,
 				1D43A9C426A4046900F81DFE /* Instance.swift in Sources */,

@@ -8,5 +8,8 @@ target 'NerdDetector' do
   # Pods for NerdDetector
 
 pod 'lottie-ios'
+pod 'Amplify'
+pod 'AmplifyPlugins/AWSCognitoAuthPlugin'
+pod 'AWSRekognition'
 
 end

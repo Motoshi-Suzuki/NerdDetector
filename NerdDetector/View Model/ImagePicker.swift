@@ -10,8 +10,9 @@ import PhotosUI
 
 struct ImagePicker: UIViewControllerRepresentable {
     
-    @Environment(\.presentationMode) var presentationMode
     @Binding var image: Image?
+    @Binding var uiImage: UIImage?
+    @Environment(\.presentationMode) var presentationMode
     
     var pickerConfig: PHPickerConfiguration {
         var pickerConfig = PHPickerConfiguration(photoLibrary: PHPhotoLibrary.shared())
@@ -37,7 +38,8 @@ struct ImagePicker: UIViewControllerRepresentable {
                     image.itemProvider.loadObject(ofClass: UIImage.self) { selectedImage, error in
                         if let selectedImage = selectedImage as? UIImage {
                             DispatchQueue.main.async {
-                                self.parent.image = Image(uiImage: selectedImage)
+                                self.parent.uiImage = selectedImage
+                                self.parent.image = Image(uiImage: self.parent.uiImage!)
                                 print("didFinishPicking")
                             }
                         }

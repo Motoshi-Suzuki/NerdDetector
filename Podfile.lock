@@ -1,16 +1,64 @@
 PODS:
+  - Amplify (1.12.0):
+    - Amplify/Default (= 1.12.0)
+  - Amplify/Default (1.12.0)
+  - AmplifyPlugins/AWSCognitoAuthPlugin (1.12.0):
+    - AWSAuthCore (~> 2.24.0)
+    - AWSCognitoIdentityProvider (~> 2.24.0)
+    - AWSCognitoIdentityProviderASF (~> 2.24.0)
+    - AWSCore (~> 2.24.0)
+    - AWSMobileClient (~> 2.24.0)
+    - AWSPluginsCore (= 1.12.0)
+  - AWSAuthCore (2.24.3):
+    - AWSCore (= 2.24.3)
+  - AWSCognitoIdentityProvider (2.24.3):
+    - AWSCognitoIdentityProviderASF (= 2.24.3)
+    - AWSCore (= 2.24.3)
+  - AWSCognitoIdentityProviderASF (2.24.3)
+  - AWSCore (2.24.3)
+  - AWSMobileClient (2.24.3):
+    - AWSAuthCore (= 2.24.3)
+    - AWSCognitoIdentityProvider (= 2.24.3)
+    - AWSCognitoIdentityProviderASF (= 2.24.3)
+    - AWSCore (= 2.24.3)
+  - AWSPluginsCore (1.12.0):
+    - Amplify (= 1.12.0)
+    - AWSCore (~> 2.24.0)
+  - AWSRekognition (2.24.3):
+    - AWSCore (= 2.24.3)
   - lottie-ios (3.2.1)
 
 DEPENDENCIES:
+  - Amplify
+  - AmplifyPlugins/AWSCognitoAuthPlugin
+  - AWSRekognition
   - lottie-ios
 
 SPEC REPOS:
   trunk:
+    - Amplify
+    - AmplifyPlugins
+    - AWSAuthCore
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
+    - AWSMobileClient
+    - AWSPluginsCore
+    - AWSRekognition
     - lottie-ios
 
 SPEC CHECKSUMS:
+  Amplify: e8b40b8f4eba1b60cc6cd3334b0e5295c6eee6d1
+  AmplifyPlugins: 77415f53580b454673f19331653e0511313f9e00
+  AWSAuthCore: be26dde8246bb9b90a053a9392e9989149ac87d4
+  AWSCognitoIdentityProvider: 35a4d391d10add6293b2e1c9f3ccdb2237ddf8a1
+  AWSCognitoIdentityProviderASF: 48ccaa2ad4ecfba86549cb2023583aa073e2dd56
+  AWSCore: 759cbae2795ec192546187338bd21066c6b9ec0a
+  AWSMobileClient: a16718e842ae5cedc2b68a49f9bdd2e007a159c3
+  AWSPluginsCore: f84365d3194cde865d405b10f20df865bb56a630
+  AWSRekognition: 6b924da7f2f8fd89f8e97182061d8dfd13949f06
   lottie-ios: 106e92eaf11fbed0a76590b4cdb9b5ec26123ff7
 
-PODFILE CHECKSUM: f4b47dae55d83576b8f383e36a77d06c3029aecc
+PODFILE CHECKSUM: 37c747c1e473802a49a1899fa9a6cae70aaeddc4
 
 COCOAPODS: 1.10.0

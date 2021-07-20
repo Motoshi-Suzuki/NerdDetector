@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import Amplify
+import AmplifyPlugins
+import AWSCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +17,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        do {
+            Amplify.Logging.logLevel = .verbose
+            try Amplify.add(plugin: AWSCognitoAuthPlugin())
+            try Amplify.configure()
+            print("Amplify configured with Auth plugins")
+        } catch {
+            print("An error occurred setting up Amplify: \(error)")
+        }
+        
+        let credentialsProvider = AWSCognitoCredentialsProvider(
+            regionType: .APNortheast1,
+            identityPoolId: "ap-northeast-1:ed73b243-e660-4ac9-a406-e13783b26e5e"
+        )
+        let awsConfig = AWSServiceConfiguration(
+            region: .APNortheast1,
+            credentialsProvider: credentialsProvider
+        )
+        AWSServiceManager.default().defaultServiceConfiguration = awsConfig
+        
         return true
     }
 

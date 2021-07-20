@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-nerddetector-dev-90422-authRole",
+      "UnauthRoleArn": "arn:aws:iam::856218697005:role/amplify-nerddetector-dev-90422-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::856218697005:role/amplify-nerddetector-dev-90422-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-nerddetector-dev-90422-deployment",
+      "UnauthRoleName": "amplify-nerddetector-dev-90422-unauthRole",
+      "StackName": "amplify-nerddetector-dev-90422",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:856218697005:stack/amplify-nerddetector-dev-90422/e14d2c50-e824-11eb-a766-06ed5ebe7121",
+      "AmplifyAppId": "d2brto8sm6l3e5"
+    },
+    "categories": {
+      "auth": {
+        "NerdDetector": {}
+      }
+    }
+  }
+}

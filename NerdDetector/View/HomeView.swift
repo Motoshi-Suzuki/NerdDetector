@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
-import PhotosUI
 
 struct HomeView: View {
     
+    let rekognition = Rekognition()
     @ObservedObject var imageClass = ImageClass()
     @Environment(\.presentationMode) var presentation
     
+    @State private var uiImage: UIImage?
     @State private var showingActionSheet = false
     @State private var showingImagePicker = false
     @State private var showingCameraPicker = false
@@ -25,13 +26,15 @@ struct HomeView: View {
             
             VStack(spacing: 40) {
                 ImageView(image: $imageClass.image,
+                          uiImage: $uiImage,
                           showingActionSheet: $showingActionSheet,
                           showingImagePicker: $showingImagePicker,
                           showingCameraPicker: $showingCameraPicker)
                 
                 VStack(spacing: 30) {
                     Button(action: {
-                        showingAnalysingView = true
+//                        showingAnalysingView = true
+                        rekognition.detectFaces(image: uiImage!)
                     }, label: {
                         CircleButton(text: "ANALYSE")
                     })
@@ -56,6 +59,7 @@ struct HomeView: View {
 struct ImageView: View {
     
     @Binding var image: Image?
+    @Binding var uiImage: UIImage?
     @Binding var showingActionSheet: Bool
     @Binding var showingImagePicker: Bool
     @Binding var showingCameraPicker: Bool
@@ -85,19 +89,21 @@ struct ImageView: View {
                         message: Text("Choose a picture from Photo Library or take a new picture."),
                         buttons: [
                             .default(Text("Photo Library"), action: {
+                                self.showingActionSheet = false
                                 self.showingImagePicker = true
                             }),
                             .default(Text("Camera"), action: {
+                                self.showingActionSheet = false
                                 self.showingCameraPicker = true
                             }),
                             .cancel()
                         ])
         })
         .sheet(isPresented: $showingImagePicker, content: {
-            ImagePicker(image: $image)
+            ImagePicker(image: $image, uiImage: $uiImage)
         })
         .sheet(isPresented: $showingCameraPicker, content: {
-            CameraPicker(image: $image)
+            CameraPicker(image: $image, uiImage: $uiImage)
         })
     }
 }

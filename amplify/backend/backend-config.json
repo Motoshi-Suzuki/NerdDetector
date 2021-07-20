@@ -1,0 +1,11 @@
+{
+  "auth": {
+    "NerdDetector": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  },
+  "predictions": {}
+}

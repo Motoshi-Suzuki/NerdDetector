@@ -7,9 +7,6 @@
 
 import SwiftUI
 
-//class SharedInstance: ObservableObject {
-//}
-
 class ImageClass: ObservableObject {
     @Published var image: Image?
 }
