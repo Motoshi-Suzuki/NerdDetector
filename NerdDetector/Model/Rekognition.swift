@@ -9,17 +9,38 @@ import Foundation
 import AWSRekognition
 
 class Rekognition {
+    
     private var rekognition: AWSRekognition?
     private var imageSizeKB: Double = 0.0
+    private var imageData: Data?
     
     func detectFaces(image: UIImage) {
-        rekognitionImage(image: image)
+        
+        self.rekognition = AWSRekognition.default()
+        let detectFacesRequest = AWSRekognitionDetectFacesRequest()
+        let rekognitionImage = AWSRekognitionImage()
+        
+        self.processImage(image: image) { imageData in
+            rekognitionImage?.bytes = imageData
+            print("processImage")
+        }
+        detectFacesRequest?.image = rekognitionImage
+        
+        guard let request = detectFacesRequest else {
+            return
+        }
+        
+        self.rekognition?.detectFaces(request) { response, error in
+            if let response = response {
+                print("-----success-----", "\n\(response)")
+                
+            } else if let error = error {
+                print("-----failure-----", "\n\(error)")
+            }
+        }
     }
     
-    func rekognitionImage(image: UIImage) {
-        
-        let rekognitionImage = AWSRekognitionImage()
-
+    func processImage(image: UIImage, completion: (Data) -> Void) {
         // Image must be .jpeg or .png format.
         guard let originalImageData = image.jpegData(compressionQuality: 1.0) else {
             print("Image data is nill.")
@@ -30,7 +51,7 @@ class Rekognition {
         
         // Image must not be larger than 5MB.
         if imageSizeKB <= 5000.0 {
-            rekognitionImage?.bytes = originalImageData
+            self.imageData = originalImageData
             print("The original size of this image is \(imageSizeKB)KB.")
            
         // If image was larger than 5MB,
@@ -42,7 +63,7 @@ class Rekognition {
                 print("The size of compressed image is \(imageSizeKB)KB.")
                 
                 if imageSizeKB <= 5000.0 {
-                    rekognitionImage?.bytes = compressedImageData
+                    self.imageData = compressedImageData
                 
                 // In case of unexpected large bytes.
                 } else {
@@ -51,7 +72,7 @@ class Rekognition {
                         print("The size of MaxCompressed image is \(imageSizeKB)KB.")
                         
                         if imageSizeKB <= 5000.0  {
-                            rekognitionImage?.bytes = maxCompressedImageData
+                            self.imageData = maxCompressedImageData
                             
                         // In case of vaey unexpected huge bytes.
                         } else {
@@ -65,7 +86,7 @@ class Rekognition {
                                     print("The size of resized image is \(imageSizeKB)KB.")
                                     
                                     if imageSizeKB <= 5000.0 {
-                                        rekognitionImage?.bytes = resizedImageData
+                                        self.imageData = resizedImageData
                                     }
                                 }
                             }
@@ -74,6 +95,7 @@ class Rekognition {
                 }
             }
         }
+        completion(self.imageData!)
     }
     
     func calculateImageSize(imageData: Data) {

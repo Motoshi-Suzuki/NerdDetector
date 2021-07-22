@@ -34,7 +34,11 @@ struct HomeView: View {
                 VStack(spacing: 30) {
                     Button(action: {
 //                        showingAnalysingView = true
-                        rekognition.detectFaces(image: uiImage!)
+                        if let uiImage = uiImage {
+                            rekognition.detectFaces(image: uiImage)
+                        } else {
+                            print("Parameter 'uiImage' is nil.")
+                        }
                     }, label: {
                         CircleButton(text: "ANALYSE")
                     })
