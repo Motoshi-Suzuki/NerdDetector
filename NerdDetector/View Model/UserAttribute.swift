@@ -8,14 +8,13 @@
 import SwiftUI
 
 class UserAttribute: ObservableObject {
-    @Published var isNerd = false
     
     func setAttribute(isNerdArray: [Bool]) {
         if isNerdArray == [true, false] {
-            self.isNerd = true
+            SharedInstance.isNerd = true
             
         } else if isNerdArray == [false, true] {
-            self.isNerd = false
+            SharedInstance.isNerd = false
         }
     }
     

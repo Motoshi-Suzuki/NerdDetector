@@ -10,7 +10,6 @@ import SwiftUI
 struct CameraPicker: UIViewControllerRepresentable {
     
     @Binding var image: Image?
-    @Binding var uiImage: UIImage?
     @Environment(\.presentationMode) var presentationMode
     
     func makeCoordinator() -> Coordinator {
@@ -26,8 +25,8 @@ struct CameraPicker: UIViewControllerRepresentable {
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             if let uiImage = info[.originalImage] as? UIImage {
-                self.parent.uiImage = uiImage
-                self.parent.image = Image(uiImage: self.parent.uiImage!)
+                SharedInstance.uiImage = uiImage
+                self.parent.image = Image(uiImage: SharedInstance.uiImage)
             }
             self.parent.presentationMode.wrappedValue.dismiss()
         }

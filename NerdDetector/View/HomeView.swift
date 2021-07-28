@@ -9,11 +9,10 @@ import SwiftUI
 
 struct HomeView: View {
     
-    let rekognition = Rekognition()
+    let rekognitionImage = RekognitionImage()
     @ObservedObject var imageClass = ImageClass()
     @Environment(\.presentationMode) var presentation
     
-    @State private var uiImage: UIImage?
     @State private var showingActionSheet = false
     @State private var showingImagePicker = false
     @State private var showingCameraPicker = false
@@ -26,7 +25,6 @@ struct HomeView: View {
             
             VStack(spacing: 40) {
                 ImageView(image: $imageClass.image,
-                          uiImage: $uiImage,
                           showingActionSheet: $showingActionSheet,
                           showingImagePicker: $showingImagePicker,
                           showingCameraPicker: $showingCameraPicker)
@@ -34,8 +32,8 @@ struct HomeView: View {
                 VStack(spacing: 30) {
                     Button(action: {
 //                        showingAnalysingView = true
-                        if let uiImage = uiImage {
-                            rekognition.detectFaces(image: uiImage)
+                        if imageClass.image != nil {
+                            rekognitionImage.prepareForDetectFaces()
                         } else {
                             print("Parameter 'uiImage' is nil.")
                         }
@@ -63,7 +61,6 @@ struct HomeView: View {
 struct ImageView: View {
     
     @Binding var image: Image?
-    @Binding var uiImage: UIImage?
     @Binding var showingActionSheet: Bool
     @Binding var showingImagePicker: Bool
     @Binding var showingCameraPicker: Bool
@@ -104,10 +101,10 @@ struct ImageView: View {
                         ])
         })
         .sheet(isPresented: $showingImagePicker, content: {
-            ImagePicker(image: $image, uiImage: $uiImage)
+            ImagePicker(image: $image)
         })
         .sheet(isPresented: $showingCameraPicker, content: {
-            CameraPicker(image: $image, uiImage: $uiImage)
+            CameraPicker(image: $image)
         })
     }
 }

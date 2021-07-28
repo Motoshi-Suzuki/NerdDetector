@@ -23,28 +23,28 @@ enum Emotions: Int {
         case .zero:
             return "unknown"
         case .one:
-            Rekognition.positiveScore += confidence
+            SharedInstance.positiveScore += confidence
             return "happy"
         case .two:
-            Rekognition.negativeScore += confidence
+            SharedInstance.negativeScore += confidence
             return "sad"
         case .three:
-            Rekognition.negativeScore += confidence
+            SharedInstance.negativeScore += confidence
             return "angry"
         case .four:
-            Rekognition.negativeScore += confidence
+            SharedInstance.negativeScore += confidence
             return "confused"
         case .five:
-            Rekognition.negativeScore += confidence
+            SharedInstance.negativeScore += confidence
             return "disgusted"
         case .six:
-            Rekognition.positiveScore += confidence
+            SharedInstance.positiveScore += confidence
             return "surprised"
         case .seven:
-            Rekognition.positiveScore += confidence
+            SharedInstance.positiveScore += confidence
             return "calm"
         case .eight:
-            Rekognition.negativeScore += confidence
+            SharedInstance.negativeScore += confidence
             return "fear"
         }
     }
@@ -59,7 +59,7 @@ enum Eyeglasses: Int {
         case .zero:
             return false
         case .one:
-            Rekognition.negativeScore += (confidence / 2)
+            SharedInstance.negativeScore += (confidence / 2)
             return true
         }
     }
@@ -72,7 +72,7 @@ enum EyeOpen: Int {
     func returnBool(confidence: Double) -> Bool {
         switch self {
         case .zero:
-            Rekognition.negativeScore += confidence
+            SharedInstance.negativeScore += confidence
             return false
         case .one:
             return true
@@ -104,10 +104,10 @@ enum Smile: Int {
     func returnBool(confidence: Double) -> Bool {
         switch self {
         case .zero:
-            Rekognition.negativeScore += (confidence / 4)
+            SharedInstance.negativeScore += (confidence / 4)
             return false
         case .one:
-            Rekognition.positiveScore += confidence
+            SharedInstance.positiveScore += confidence
             return true
         }
     }
@@ -122,8 +122,8 @@ enum Sunglasses: Int {
         case .zero:
             return false
         case .one:
-            Rekognition.positiveScore += (confidence / 2)
-            Rekognition.negativeScore -= (confidence / 2)
+            SharedInstance.positiveScore += (confidence / 2)
+            SharedInstance.negativeScore -= (confidence / 2)
             return true
         }
     }
