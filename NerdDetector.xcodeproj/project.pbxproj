@@ -34,6 +34,7 @@
 		1D9882FA26A2C46500803E1A /* 6.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D9882F026A2C46500803E1A /* 6.json */; };
 		1D9882FB26A2C46500803E1A /* 1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D9882F126A2C46500803E1A /* 1.json */; };
 		1D9882FC26A2C46500803E1A /* 3.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D9882F226A2C46500803E1A /* 3.json */; };
+		1DB72F5D26AFE92400A49423 /* RekognitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB72F5C26AFE92400A49423 /* RekognitionModel.swift */; };
 		4BB7780F9AA377B7DB2F07C8 /* Pods_NerdDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7AA3BA0A87A5C9AC886B4F6 /* Pods_NerdDetector.framework */; };
 		74133691FB0D85375E2CF5FB /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 89927435DD11900E159EBC4C /* awsconfiguration.json */; };
 		9F60B00D8DFC37E99899D1EE /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BEBE43DBF227551F621C853 /* amplifyconfiguration.json */; };
@@ -69,6 +70,7 @@
 		1D9882F026A2C46500803E1A /* 6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 6.json; path = Image/LottieFiles/6.json; sourceTree = SOURCE_ROOT; };
 		1D9882F126A2C46500803E1A /* 1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 1.json; path = Image/LottieFiles/1.json; sourceTree = SOURCE_ROOT; };
 		1D9882F226A2C46500803E1A /* 3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 3.json; path = Image/LottieFiles/3.json; sourceTree = SOURCE_ROOT; };
+		1DB72F5C26AFE92400A49423 /* RekognitionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RekognitionModel.swift; sourceTree = "<group>"; };
 		2BEBE43DBF227551F621C853 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		89927435DD11900E159EBC4C /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		D80760315FB6B49313DBE6A3 /* Pods-NerdDetector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NerdDetector.debug.xcconfig"; path = "Target Support Files/Pods-NerdDetector/Pods-NerdDetector.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			children = (
 				1D43A9C326A4046900F81DFE /* Instance.swift */,
 				1D53F9CE26A68D12001B8AED /* Rekognition.swift */,
+				1DB72F5C26AFE92400A49423 /* RekognitionModel.swift */,
 				1D53F9D026A6FCD2001B8AED /* Extension.swift */,
 			);
 			path = Model;
@@ -352,6 +355,7 @@
 				1D3A878F269ED53400F57AC9 /* ButtonDesign.swift in Sources */,
 				1D717F7A26A1147F00E17189 /* CameraPicker.swift in Sources */,
 				1D53F9D126A6FCD2001B8AED /* Extension.swift in Sources */,
+				1DB72F5D26AFE92400A49423 /* RekognitionModel.swift in Sources */,
 				1D4FBCDE269D2D9A00328159 /* ImagePicker.swift in Sources */,
 				1D4FBCDC269C115400328159 /* HomeView.swift in Sources */,
 				1D43A9C426A4046900F81DFE /* Instance.swift in Sources */,
