@@ -22,7 +22,8 @@
 		1D53F9CF26A68D12001B8AED /* Rekognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D53F9CE26A68D12001B8AED /* Rekognition.swift */; };
 		1D53F9D126A6FCD2001B8AED /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D53F9D026A6FCD2001B8AED /* Extension.swift */; };
 		1D717F7A26A1147F00E17189 /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D717F7926A1147F00E17189 /* CameraPicker.swift */; };
-		1D918B7526B186150019FF35 /* RekognitionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D918B7426B186150019FF35 /* RekognitionImage.swift */; };
+		1D89C8B926B2400F006C9576 /* RekognitionPreparation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D89C8B826B2400F006C9576 /* RekognitionPreparation.swift */; };
+		1D89C8BB26B24066006C9576 /* RekognitionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D89C8BA26B24066006C9576 /* RekognitionResult.swift */; };
 		1D9882E626A2781F00803E1A /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9882E526A2781F00803E1A /* LottieView.swift */; };
 		1D9882E826A278DA00803E1A /* AnalysingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9882E726A278DA00803E1A /* AnalysingView.swift */; };
 		1D9882F326A2C46500803E1A /* 9.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D9882E926A2C46400803E1A /* 9.json */; };
@@ -59,7 +60,8 @@
 		1D53F9CE26A68D12001B8AED /* Rekognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rekognition.swift; sourceTree = "<group>"; };
 		1D53F9D026A6FCD2001B8AED /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		1D717F7926A1147F00E17189 /* CameraPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
-		1D918B7426B186150019FF35 /* RekognitionImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RekognitionImage.swift; sourceTree = "<group>"; };
+		1D89C8B826B2400F006C9576 /* RekognitionPreparation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RekognitionPreparation.swift; sourceTree = "<group>"; };
+		1D89C8BA26B24066006C9576 /* RekognitionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RekognitionResult.swift; sourceTree = "<group>"; };
 		1D9882E526A2781F00803E1A /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		1D9882E726A278DA00803E1A /* AnalysingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysingView.swift; sourceTree = "<group>"; };
 		1D9882E926A2C46400803E1A /* 9.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = 9.json; path = Image/LottieFiles/9.json; sourceTree = SOURCE_ROOT; };
@@ -140,7 +142,8 @@
 				1D4FBCDD269D2D9A00328159 /* ImagePicker.swift */,
 				1D717F7926A1147F00E17189 /* CameraPicker.swift */,
 				1D9882E526A2781F00803E1A /* LottieView.swift */,
-				1D918B7426B186150019FF35 /* RekognitionImage.swift */,
+				1D89C8B826B2400F006C9576 /* RekognitionPreparation.swift */,
+				1D89C8BA26B24066006C9576 /* RekognitionResult.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -354,14 +357,15 @@
 				1D53F9CF26A68D12001B8AED /* Rekognition.swift in Sources */,
 				1D9882E626A2781F00803E1A /* LottieView.swift in Sources */,
 				1D9882E826A278DA00803E1A /* AnalysingView.swift in Sources */,
+				1D89C8B926B2400F006C9576 /* RekognitionPreparation.swift in Sources */,
 				1D4FBCC62699772500328159 /* SceneDelegate.swift in Sources */,
 				1D3A878F269ED53400F57AC9 /* ButtonDesign.swift in Sources */,
 				1D717F7A26A1147F00E17189 /* CameraPicker.swift in Sources */,
 				1D53F9D126A6FCD2001B8AED /* Extension.swift in Sources */,
+				1D89C8BB26B24066006C9576 /* RekognitionResult.swift in Sources */,
 				1DB72F5D26AFE92400A49423 /* RekognitionModel.swift in Sources */,
 				1D4FBCDE269D2D9A00328159 /* ImagePicker.swift in Sources */,
 				1D4FBCDC269C115400328159 /* HomeView.swift in Sources */,
-				1D918B7526B186150019FF35 /* RekognitionImage.swift in Sources */,
 				1D43A9C426A4046900F81DFE /* Instance.swift in Sources */,
 				1D4FBCC82699772500328159 /* SelectionView.swift in Sources */,
 			);

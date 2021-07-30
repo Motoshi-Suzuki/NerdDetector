@@ -14,6 +14,7 @@ class ImageClass: ObservableObject {
 class SharedInstance {
     static var isNerd = false
     static var uiImage = UIImage()
+    static var resultUiImage = UIImage()
     static var positiveScore: Double = 0.0
     static var negativeScore: Double = 0.0
 }

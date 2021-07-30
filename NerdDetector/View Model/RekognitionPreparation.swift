@@ -1,13 +1,13 @@
 //
-//  RekognitionImage.swift
+//  RekognitionPreparation.swift
 //  NerdDetector
 //
-//  Created by Motoshi Suzuki on 2021/07/28.
+//  Created by Motoshi Suzuki on 2021/07/29.
 //
 
 import Foundation
 
-class RekognitionImage {
+class DetectFacesPreparation {
     
     private var imageSizeKB: Double = 0.0
     private var imageData: Data?
@@ -20,6 +20,7 @@ class RekognitionImage {
             print("Image data is nil.")
             return
         }
+        SharedInstance.resultUiImage = SharedInstance.uiImage
         rekognition.detectFaces(imageData: self.imageData!)
     }
     

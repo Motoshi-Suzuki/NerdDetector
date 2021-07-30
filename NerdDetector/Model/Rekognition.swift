@@ -11,6 +11,7 @@ import AWSRekognition
 class Rekognition {
     
     private var rekognition: AWSRekognition?
+    let detectFacesResult = DetectFacesResult()
     
     func detectFaces(imageData: Data) {
         
@@ -47,6 +48,15 @@ class Rekognition {
                     // Access AgeRagne.
                     if let ageRange: AWSRekognitionAgeRange = attributes.ageRange {
                         print("\n-----Result of AgeRange-----", "\nThe estimated age range is \(ageRange.low!) - \(ageRange.high!).")
+                    }
+                    
+                    // Access BoundingBox.
+                    if let boundingBox: AWSRekognitionBoundingBox = attributes.boundingBox {
+                        let boundingBoxDict = ["height" : boundingBox.height,
+                                               "left" : boundingBox.left,
+                                               "top" : boundingBox.top,
+                                               "width" : boundingBox.width] as! [String : CGFloat]
+                        self.detectFacesResult.synthesiseBoundingBox(boundingBoxInfo: boundingBoxDict)
                     }
                     
                     // Access Emotions.
@@ -89,6 +99,14 @@ class Rekognition {
                     if let gender: AWSRekognitionGender = attributes.gender {
                         let genderName = Gender(rawValue: gender.value.rawValue)?.returnGenderName()
                         print("\n-----Result of Gender-----", "\nThe predicted gender of this face is \(genderName!).")
+                    }
+                    
+                    // Access Landmarks.
+                    if let landmarks: [AWSRekognitionLandmark] = attributes.landmarks {
+                        for i in landmarks {
+                            let landmarkDict = ["x" : i.x, "y" : i.y] as! [String : CGFloat]
+                            self.detectFacesResult.synthesiseLandmarks(landmarkInfo: landmarkDict)
+                        }
                     }
                     
                     // Access Smile.

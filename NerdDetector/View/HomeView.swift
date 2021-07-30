@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    let rekognitionImage = RekognitionImage()
+    let preparation = DetectFacesPreparation()
     @ObservedObject var imageClass = ImageClass()
     @Environment(\.presentationMode) var presentation
     
@@ -33,7 +33,7 @@ struct HomeView: View {
                     Button(action: {
 //                        showingAnalysingView = true
                         if imageClass.image != nil {
-                            rekognitionImage.prepareForDetectFaces()
+                            preparation.prepareForDetectFaces()
                         } else {
                             print("Parameter 'uiImage' is nil.")
                         }
