@@ -15,10 +15,6 @@ class Rekognition {
     
     func detectFaces(imageData: Data) {
         
-        SharedInstance.positiveScore = 0.0
-        SharedInstance.negativeScore = 0.0
-        SharedInstance.noFaceDetected = false
-                
         self.rekognition = AWSRekognition.default()
         let detectFacesRequest = AWSRekognitionDetectFacesRequest()
         let rekognitionImage = AWSRekognitionImage()
@@ -29,6 +25,7 @@ class Rekognition {
         
         guard let request = detectFacesRequest else {
             print("DetectFaces request is nil.")
+            SharedInstance.failedToDetectFaces = true
             self.detectFacesResult.terminateDetectFaces()
             return
         }
@@ -39,13 +36,14 @@ class Rekognition {
                 print("\n-----success-----")
                 
                 let faceDetails: [AWSRekognitionFaceDetail]? = response.faceDetails
+                
                 guard faceDetails?.isEmpty != true else {
                     print("...but no face detected.")
                     SharedInstance.noFaceDetected = true
-                    SharedInstance.resultUiImage = SharedInstance.uiImage
                     self.detectFacesResult.terminateDetectFaces()
                     return
                 }
+                
                 // Print all results.
                 print(faceDetails!)
                 
@@ -109,10 +107,12 @@ class Rekognition {
                     
                     // Access Landmarks.
 //                    if let landmarks: [AWSRekognitionLandmark] = attributes.landmarks {
+//                        var landmarkDicts: [[String: CGFloat]] = []
 //                        for i in landmarks {
 //                            let landmarkDict = ["x" : i.x, "y" : i.y] as! [String : CGFloat]
-//                            self.detectFacesResult.synthesiseLandmarks(landmarkInfo: landmarkDict)
+//                            landmarkDicts.append(landmarkDict)
 //                        }
+//                        self.detectFacesResult.synthesiseLandmarks(landmarkInfo: landmarkDicts)
 //                    }
                     
                     // Access Smile.
@@ -138,9 +138,9 @@ class Rekognition {
                 
             } else if let error = error {
                 print("\n-----failure-----", "\n\(error)")
+                SharedInstance.failedToDetectFaces = true
                 self.detectFacesResult.terminateDetectFaces()
             }
         }
     }
-    
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class UserAttribute: ObservableObject {
+class UserAttribute {
     
     func setAttribute(isNerdArray: [Bool]) {
         if isNerdArray == [true, false] {
@@ -29,23 +29,30 @@ class UserAttribute: ObservableObject {
     
     func showMessage() -> String {
         
-        if SharedInstance.noFaceDetected != true {
-            switch SharedInstance.isNerd {
-            case true:
-                if SharedInstance.positiveScore > SharedInstance.negativeScore {
-                    return "Oh, it seems you are not a Nerd."
-                } else {
-                    return "You are a real Nerd!!"
+        if SharedInstance.failedToDetectFaces != true {
+            if SharedInstance.noFaceDetected != true {
+                
+                switch SharedInstance.isNerd {
+                case true:
+                    if SharedInstance.positiveScore > SharedInstance.negativeScore {
+                        return "Oh, you may not be a Nerd."
+                    } else {
+                        return "You are a real Nerd!!"
+                    }
+                case false:
+                    if SharedInstance.positiveScore > SharedInstance.negativeScore {
+                        return "You are not a Nerd."
+                    } else {
+                        return "Oh, it seems you are a Nerd."
+                    }
                 }
-            case false:
-                if SharedInstance.positiveScore > SharedInstance.negativeScore {
-                    return "You are not a Nerd."
-                } else {
-                    return "Oh, it seems you are a Nerd."
-                }
+            // if noFaceDetected == true,
+            } else {
+                return "No face detected."
             }
+        // if failedToDetectFaces == true,
         } else {
-            return "No face detected."
+            return "Oops...something went wrong."
         }
     }
 }

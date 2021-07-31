@@ -13,6 +13,7 @@ class ImageClass: ObservableObject {
 
 struct SharedInstance {
     static var isNerd = false
+    static var failedToDetectFaces = false
     static var noFaceDetected = false
     static var uiImage = UIImage()
     static var resultUiImage = UIImage()

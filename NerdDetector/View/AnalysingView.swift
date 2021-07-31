@@ -28,26 +28,30 @@ struct AnalysingView: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: ResultView(showingAnalysingView: $showingAnalysingView),
+                NavigationLink(destination: ResultView(showingAnalysingView: $showingAnalysingView, animationNumber: $animationNumber),
                                isActive: $showingResultView) {
                     EmptyView()
                 }
             }
         }
-        .onReceive(NotificationCenter.default.publisher(for: .detectFacesFailed), perform: { _ in
-            self.showingAnalysingView = false
-        })
+        .onAppear {
+            self.animationNumber += 1
+            
+            if self.animationNumber > 16 {
+                self.animationNumber = 0
+            }
+            
+            UserDefaults.standard.set(self.animationNumber, forKey: "animationNumber")
+        }
+        
         .onReceive(NotificationCenter.default.publisher(for: .detectFacesFinished), perform: { _ in
+            if SharedInstance.noFaceDetected != false {
+                self.animationNumber = 100
+            } else if SharedInstance.failedToDetectFaces != false {
+                self.animationNumber = 404
+            }
             self.showingResultView = true
         })
-        .onDisappear {
-            if animationNumber == 9 {
-                animationNumber = 0
-            } else {
-                animationNumber += 1
-            }
-            UserDefaults.standard.set(animationNumber, forKey: "animationNumber")
-        }
     }
 }
 

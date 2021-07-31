@@ -12,7 +12,7 @@ struct SelectionView: View {
     @State private var isNerdArray: [Bool] = [false, false]
     @State private var showAlert = false
     @State private var moveToHomeView = false
-    @EnvironmentObject var userAttribute: UserAttribute
+    let userAttribute = UserAttribute()
     
     var body: some View {
         NavigationView {
@@ -29,10 +29,11 @@ struct SelectionView: View {
                     EmptyView()
                 }
             }
-            .navigationBarTitle(Text("Are you Nerd?"))
+            .navigationBarTitle(Text("Are you a Nerd?"))
         }
         .onAppear(perform: {
             if let isNerd = UserDefaults.standard.array(forKey: "isNerdArray") {
+                self.moveToHomeView = true
                 isNerdArray = isNerd as! [Bool]
                 userAttribute.setAttribute(isNerdArray: isNerdArray)
                 userAttribute.printMessage(messageForNerd: "This user is Nerd.",
@@ -46,7 +47,7 @@ struct SelectionView: View {
 
 struct IsNerdButtons: View {
     @Binding var isNerdArray: [Bool]
-    @EnvironmentObject var userAttribute: UserAttribute
+    let userAttribute = UserAttribute()
     
     var body: some View {
         Button(action: {
@@ -84,7 +85,7 @@ struct OKButton: View {
     @Binding var isNerdArray: [Bool]
     @Binding var showAlert: Bool
     @Binding var moveToHomeView: Bool
-    @EnvironmentObject var userAttribute: UserAttribute
+    let userAttribute = UserAttribute()
     
     var body: some View {
         Button(
@@ -119,9 +120,6 @@ struct OKButton: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         SelectionView()
-            .environmentObject(UserAttribute())
-        SelectionView()
-            .preferredColorScheme(.dark)
-            .environmentObject(UserAttribute())
+        SelectionView().preferredColorScheme(.dark)
     }
 }

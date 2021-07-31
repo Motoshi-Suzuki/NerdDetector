@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ResultView: View {
     
-    @Binding var showingAnalysingView: Bool
     @State private var resultImage: Image?
     @State private var message: String?
+    @Binding var showingAnalysingView: Bool
+    @Binding var animationNumber: Int
     
     var body: some View {
         ZStack {
@@ -19,7 +20,7 @@ struct ResultView: View {
                 .ignoresSafeArea()
             
             VStack(spacing: 50) {
-                ResultImageView(resultImage: $resultImage)
+                ResultImageView(resultImage: $resultImage, animationNumber: $animationNumber)
                 
                 VStack(spacing: 10) {
                     Text(self.message ?? "You are xxx.")
@@ -39,18 +40,19 @@ struct ResultView: View {
             self.message = userAttribute.showMessage()
         })
         .navigationBarBackButtonHidden(true)
+        .navigationBarTitle("", displayMode: .inline)
         .navigationBarItems(leading:
             Button(action: {
                 self.showingAnalysingView = false
             }, label: {
                 Image(systemName: "xmark")
-            })
-        )
+            }))
     }
 }
 
 struct ResultImageView: View {
     @Binding var resultImage: Image?
+    @Binding var animationNumber: Int
     
     var body: some View {
         ZStack {
@@ -64,21 +66,27 @@ struct ResultImageView: View {
                     .scaledToFit()
                     .frame(height: 500)
             } else {
-                Text("Oops...something went wrong.")
-                    .foregroundColor(.white)
-                    .font(.title2)
+                Rectangle()
+                    .fill(Color.white)
+                    .frame(height: 500)
+                
+                LottieView(animationNumber: $animationNumber)
+                    .frame(height: 500)
             }
         }
         .onAppear(perform: {
-            self.resultImage = Image(uiImage: SharedInstance.resultUiImage)
+            if SharedInstance.failedToDetectFaces != true && SharedInstance.noFaceDetected != true {
+                self.resultImage = Image(uiImage: SharedInstance.resultUiImage)
+            }
         })
     }
 }
 
 struct ResultView_Previews: PreviewProvider {
     @State static var showingAnalysingView = true
+    @State static var animationNumber: Int = 100
     static var previews: some View {
-        ResultView(showingAnalysingView: $showingAnalysingView)
-        ResultView(showingAnalysingView: $showingAnalysingView).preferredColorScheme(.dark)
+        ResultView(showingAnalysingView: $showingAnalysingView, animationNumber: $animationNumber)
+        ResultView(showingAnalysingView: $showingAnalysingView, animationNumber: $animationNumber).preferredColorScheme(.dark)
     }
 }

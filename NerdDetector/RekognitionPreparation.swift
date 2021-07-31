@@ -14,6 +14,12 @@ class DetectFacesPreparation {
     let rekognition = Rekognition()
     
     func prepareForDetectFaces() {
+        
+        SharedInstance.positiveScore = 0.0
+        SharedInstance.negativeScore = 0.0
+        SharedInstance.failedToDetectFaces = false
+        SharedInstance.noFaceDetected = false
+        
         self.prepareImage()
         
         guard self.imageData != nil else {
@@ -21,7 +27,7 @@ class DetectFacesPreparation {
             self.cancelDetectFaces()
             return
         }
-//        SharedInstance.resultUiImage = SharedInstance.uiImage
+        SharedInstance.resultUiImage = SharedInstance.uiImage
         rekognition.detectFaces(imageData: self.imageData!)
     }
     
@@ -92,8 +98,9 @@ class DetectFacesPreparation {
     }
     
     func cancelDetectFaces() {
+        SharedInstance.failedToDetectFaces = true
         DispatchQueue.main.async {
-            NotificationCenter.default.post(name: .detectFacesFailed, object: nil)
+            NotificationCenter.default.post(name: .detectFacesFinished, object: nil)
         }
         print("DetectFaces is canceled.")
     }

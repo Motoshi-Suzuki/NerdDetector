@@ -17,6 +17,5 @@ extension UIImage {
 }
 
 extension Notification.Name {
-    static let detectFacesFailed = Notification.Name("detectFacesFailed")
     static let detectFacesFinished = Notification.Name("detectFacesFinished")
 }

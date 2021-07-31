@@ -17,6 +17,7 @@ struct HomeView: View {
     @State private var showingImagePicker = false
     @State private var showingCameraPicker = false
     @State private var showingAnalysingView = false
+    @State private var showingSafariView = false
     
     var body: some View {
         ZStack {
@@ -45,6 +46,7 @@ struct HomeView: View {
                         self.presentation.wrappedValue.dismiss()
                     }, label: {
                         Text("< Back to Setting")
+                            .font(.callout)
                     })
                 }
             }
@@ -52,9 +54,17 @@ struct HomeView: View {
         .fullScreenCover(isPresented: $showingAnalysingView, content: {
             AnalysingView(showingAnalysingView: $showingAnalysingView)
         })
-        
+        .sheet(isPresented: $showingSafariView, content: {
+            SafariView(url: URL(string: "https://www.freeprivacypolicy.com/live/6ff09052-2ca7-43b8-96f3-e5231e2be627")!)
+        })
         .navigationBarBackButtonHidden(true)
-        .navigationBarTitle("Nerd Detector", displayMode: .inline)        
+        .navigationBarTitle("Nerd Detector", displayMode: .inline)
+        .navigationBarItems(trailing:
+            Button(action: {
+                self.showingSafariView = true
+            }, label: {
+                Image(systemName: "info.circle")
+            }))
     }
 }
 
