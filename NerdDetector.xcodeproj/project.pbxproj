@@ -10,7 +10,6 @@
 		1D3A878F269ED53400F57AC9 /* ButtonDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3A878E269ED53400F57AC9 /* ButtonDesign.swift */; };
 		1D43A9BF26A3C9C500F81DFE /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43A9BE26A3C9C500F81DFE /* ResultView.swift */; };
 		1D43A9C426A4046900F81DFE /* Instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43A9C326A4046900F81DFE /* Instance.swift */; };
-		1D4FBCC42699772500328159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4FBCC32699772500328159 /* AppDelegate.swift */; };
 		1D4FBCC62699772500328159 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4FBCC52699772500328159 /* SceneDelegate.swift */; };
 		1D4FBCC82699772500328159 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4FBCC72699772500328159 /* SelectionView.swift */; };
 		1D4FBCCA2699772700328159 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D4FBCC92699772700328159 /* Assets.xcassets */; };
@@ -22,6 +21,7 @@
 		1D53F9CF26A68D12001B8AED /* Rekognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D53F9CE26A68D12001B8AED /* Rekognition.swift */; };
 		1D53F9D126A6FCD2001B8AED /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D53F9D026A6FCD2001B8AED /* Extension.swift */; };
 		1D717F7A26A1147F00E17189 /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D717F7926A1147F00E17189 /* CameraPicker.swift */; };
+		1D81B58526B5BAE500EABE90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D81B58426B5BAE500EABE90 /* AppDelegate.swift */; };
 		1D89C8B926B2400F006C9576 /* RekognitionPreparation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D89C8B826B2400F006C9576 /* RekognitionPreparation.swift */; };
 		1D89C8BB26B24066006C9576 /* RekognitionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D89C8BA26B24066006C9576 /* RekognitionResult.swift */; };
 		1D9882E626A2781F00803E1A /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9882E526A2781F00803E1A /* LottieView.swift */; };
@@ -57,7 +57,6 @@
 		1D43A9BE26A3C9C500F81DFE /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		1D43A9C326A4046900F81DFE /* Instance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instance.swift; sourceTree = "<group>"; };
 		1D4FBCC02699772500328159 /* NerdDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NerdDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D4FBCC32699772500328159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D4FBCC52699772500328159 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1D4FBCC72699772500328159 /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		1D4FBCC92699772700328159 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		1D53F9CE26A68D12001B8AED /* Rekognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rekognition.swift; sourceTree = "<group>"; };
 		1D53F9D026A6FCD2001B8AED /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		1D717F7926A1147F00E17189 /* CameraPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
+		1D81B58426B5BAE500EABE90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D89C8B826B2400F006C9576 /* RekognitionPreparation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RekognitionPreparation.swift; sourceTree = "<group>"; };
 		1D89C8BA26B24066006C9576 /* RekognitionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RekognitionResult.swift; sourceTree = "<group>"; };
 		1D9882E526A2781F00803E1A /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 		1D43A9BB26A3C3A900F81DFE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1D4FBCC32699772500328159 /* AppDelegate.swift */,
+				1D81B58426B5BAE500EABE90 /* AppDelegate.swift */,
 				1D4FBCC52699772500328159 /* SceneDelegate.swift */,
 				1D4FBCD12699772700328159 /* Info.plist */,
 				1D4FBCCE2699772700328159 /* LaunchScreen.storyboard */,
@@ -391,7 +391,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D4FBCDA269BDEEB00328159 /* UserAttribute.swift in Sources */,
-				1D4FBCC42699772500328159 /* AppDelegate.swift in Sources */,
 				1D43A9BF26A3C9C500F81DFE /* ResultView.swift in Sources */,
 				1D53F9CF26A68D12001B8AED /* Rekognition.swift in Sources */,
 				1D9882E626A2781F00803E1A /* LottieView.swift in Sources */,
@@ -403,6 +402,7 @@
 				1DA3F50226B59DBD00A2D8F5 /* SafariView.swift in Sources */,
 				1D53F9D126A6FCD2001B8AED /* Extension.swift in Sources */,
 				1D89C8BB26B24066006C9576 /* RekognitionResult.swift in Sources */,
+				1D81B58526B5BAE500EABE90 /* AppDelegate.swift in Sources */,
 				1DB72F5D26AFE92400A49423 /* RekognitionModel.swift in Sources */,
 				1D4FBCDE269D2D9A00328159 /* ImagePicker.swift in Sources */,
 				1D4FBCDC269C115400328159 /* HomeView.swift in Sources */,
