@@ -12,9 +12,10 @@ class DetectFacesResult {
         
     func synthesiseBoundingBox(boundingBoxInfo: [String : CGFloat]) {
         
-        var resultUiImage = SharedInstance.resultUiImage
+        print("synthesiseBoundingBox")
+        let uiImage = SharedInstance.uiImage
         let imageOrigin = CGPoint(x: 0, y: 0)
-        let imageSize = CGSize(width: resultUiImage.size.width, height: resultUiImage.size.height)
+        let imageSize = CGSize(width: uiImage.size.width, height: uiImage.size.height)
         
         let boxOrigin = CGPoint(x: imageSize.width * boundingBoxInfo["left"]!, y: imageSize.height * boundingBoxInfo["top"]!)
         let boxSize = CGSize(width: imageSize.width * boundingBoxInfo["width"]!, height: imageSize.height * boundingBoxInfo["height"]!)
@@ -24,7 +25,7 @@ class DetectFacesResult {
         shapeLayer.path = UIBezierPath(rect: CGRect(origin: boxOrigin, size: boxSize)).cgPath
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.strokeColor = UIColor.white.cgColor
-        shapeLayer.lineWidth = 2.0
+        shapeLayer.lineWidth = 10.0
         
         // Render BoundingBox to UIImage.
         UIGraphicsBeginImageContext(imageSize)
@@ -35,10 +36,12 @@ class DetectFacesResult {
         
         // Synthesise original image and BoundingBox image.
         UIGraphicsBeginImageContext(imageSize)
-        resultUiImage.draw(in: CGRect(origin: imageOrigin, size: imageSize))
+        uiImage.draw(in: CGRect(origin: imageOrigin, size: imageSize))
         boundingBoxImage?.draw(in: CGRect(origin: imageOrigin, size: imageSize))
-        resultUiImage = UIGraphicsGetImageFromCurrentImageContext()!
+        SharedInstance.resultUiImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
+        
+        print("\n-----BoundingBox Synthesised-----")
     }
     
     func synthesiseLandmarks(landmarkInfo: [String : CGFloat]) {
@@ -70,5 +73,12 @@ class DetectFacesResult {
         dotImage?.draw(in: CGRect(origin: imageOrigin, size: imageSize))
         resultUiImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
+    }
+    
+    func terminateDetectFaces() {
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(name: .detectFacesFinished, object: nil)
+        }
+        print("DetectFaces is terminated.")
     }
 }

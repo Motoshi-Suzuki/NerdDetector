@@ -31,8 +31,8 @@ struct HomeView: View {
                 
                 VStack(spacing: 30) {
                     Button(action: {
-//                        showingAnalysingView = true
                         if imageClass.image != nil {
+                            self.showingAnalysingView = true
                             preparation.prepareForDetectFaces()
                         } else {
                             print("Parameter 'uiImage' is nil.")
@@ -77,9 +77,17 @@ struct ImageView: View {
                     .scaledToFit()
                     .frame(height: 420)
             } else {
-                Text("Tap to select a picture")
-                    .foregroundColor(.white)
-                    .font(.title2)
+                VStack(spacing: 40) {
+                    Image(systemName: "person.crop.rectangle")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200)
+                        .foregroundColor(Color(.tertiarySystemGroupedBackground))
+                    
+                    Text("Tap to select a picture with your face")
+                        .foregroundColor(.white)
+                        .font(.title2)
+                }
             }
         }
         .onTapGesture {

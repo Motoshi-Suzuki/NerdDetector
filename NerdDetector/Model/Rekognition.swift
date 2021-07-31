@@ -17,6 +17,7 @@ class Rekognition {
         
         SharedInstance.positiveScore = 0.0
         SharedInstance.negativeScore = 0.0
+        SharedInstance.noFaceDetected = false
                 
         self.rekognition = AWSRekognition.default()
         let detectFacesRequest = AWSRekognitionDetectFacesRequest()
@@ -27,6 +28,8 @@ class Rekognition {
         detectFacesRequest?.attributes = ["ALL"]
         
         guard let request = detectFacesRequest else {
+            print("DetectFaces request is nil.")
+            self.detectFacesResult.terminateDetectFaces()
             return
         }
         
@@ -38,6 +41,9 @@ class Rekognition {
                 let faceDetails: [AWSRekognitionFaceDetail]? = response.faceDetails
                 guard faceDetails?.isEmpty != true else {
                     print("...but no face detected.")
+                    SharedInstance.noFaceDetected = true
+                    SharedInstance.resultUiImage = SharedInstance.uiImage
+                    self.detectFacesResult.terminateDetectFaces()
                     return
                 }
                 // Print all results.
@@ -102,12 +108,12 @@ class Rekognition {
                     }
                     
                     // Access Landmarks.
-                    if let landmarks: [AWSRekognitionLandmark] = attributes.landmarks {
-                        for i in landmarks {
-                            let landmarkDict = ["x" : i.x, "y" : i.y] as! [String : CGFloat]
-                            self.detectFacesResult.synthesiseLandmarks(landmarkInfo: landmarkDict)
-                        }
-                    }
+//                    if let landmarks: [AWSRekognitionLandmark] = attributes.landmarks {
+//                        for i in landmarks {
+//                            let landmarkDict = ["x" : i.x, "y" : i.y] as! [String : CGFloat]
+//                            self.detectFacesResult.synthesiseLandmarks(landmarkInfo: landmarkDict)
+//                        }
+//                    }
                     
                     // Access Smile.
                     if let smile: AWSRekognitionSmile = attributes.smile {
@@ -127,9 +133,12 @@ class Rekognition {
                         print("\nPositive Score: \(SharedInstance.positiveScore)", "\nNegative Score: \(SharedInstance.negativeScore)")
                     }
                 }
+                print("\n-----complete-----")
+                self.detectFacesResult.terminateDetectFaces()
                 
             } else if let error = error {
                 print("\n-----failure-----", "\n\(error)")
+                self.detectFacesResult.terminateDetectFaces()
             }
         }
     }

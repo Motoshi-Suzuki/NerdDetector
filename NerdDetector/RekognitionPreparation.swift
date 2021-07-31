@@ -18,9 +18,10 @@ class DetectFacesPreparation {
         
         guard self.imageData != nil else {
             print("Image data is nil.")
+            self.cancelDetectFaces()
             return
         }
-        SharedInstance.resultUiImage = SharedInstance.uiImage
+//        SharedInstance.resultUiImage = SharedInstance.uiImage
         rekognition.detectFaces(imageData: self.imageData!)
     }
     
@@ -30,6 +31,7 @@ class DetectFacesPreparation {
         // Image must be .jpeg or .png format.
         guard let originalImageData = uiImage.jpegData(compressionQuality: 1.0) else {
             print("UIImage is nill.")
+            self.cancelDetectFaces()
             return
         }
         
@@ -87,5 +89,12 @@ class DetectFacesPreparation {
     func calculateImageSize(imageData: Data) {
         let imageSize: Int = NSData(data: imageData).count
         self.imageSizeKB = Double(imageSize) / 1000.0
+    }
+    
+    func cancelDetectFaces() {
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(name: .detectFacesFailed, object: nil)
+        }
+        print("DetectFaces is canceled.")
     }
 }

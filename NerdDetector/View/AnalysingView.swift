@@ -11,13 +11,12 @@ struct AnalysingView: View {
     
     // if nil, userDefaults returns 0.
     @State private var animationNumber: Int = UserDefaults.standard.integer(forKey: "animationNumber")
+    @State private var showingResultView = false
     @Binding var showingAnalysingView: Bool
     
     var body: some View {
         NavigationView {
             VStack {
-                Spacer()
-                
                 Text("Analysing...")
                     .font(.largeTitle)
                     .fontWeight(.heavy)
@@ -27,14 +26,20 @@ struct AnalysingView: View {
                 LottieView(animationNumber: $animationNumber)
                     .frame(height: 500)
                 
-//                Spacer()
-                NavigationLink(
-                    destination: ResultView(showingAnalysingView: $showingAnalysingView),
-                    label: {
-                        Text("ResultView >")
-                    })
+                Spacer()
+                
+                NavigationLink(destination: ResultView(showingAnalysingView: $showingAnalysingView),
+                               isActive: $showingResultView) {
+                    EmptyView()
+                }
             }
         }
+        .onReceive(NotificationCenter.default.publisher(for: .detectFacesFailed), perform: { _ in
+            self.showingAnalysingView = false
+        })
+        .onReceive(NotificationCenter.default.publisher(for: .detectFacesFinished), perform: { _ in
+            self.showingResultView = true
+        })
         .onDisappear {
             if animationNumber == 9 {
                 animationNumber = 0

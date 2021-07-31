@@ -18,7 +18,7 @@ struct SelectionView: View {
         NavigationView {
             ZStack {
                 Form {
-                    Section(footer: Text("Please choose the option that represents your personality.")) {
+                    Section(footer: Text("Choose the option that represents your personality.")) {
                         IsNerdButtons(isNerdArray: $isNerdArray)
                     }
                 }
@@ -35,9 +35,8 @@ struct SelectionView: View {
             if let isNerd = UserDefaults.standard.array(forKey: "isNerdArray") {
                 isNerdArray = isNerd as! [Bool]
                 userAttribute.setAttribute(isNerdArray: isNerdArray)
-                userAttribute.printMessage(isNerd: SharedInstance.isNerd,
-                                      messageForNerd: "This user is Nerd.",
-                                      messageForNonNerd: "This user is not Nerd.")
+                userAttribute.printMessage(messageForNerd: "This user is Nerd.",
+                                           messageForNonNerd: "This user is not Nerd.")
             } else {
                 print("Welcome to NerdDetector.")
             }
@@ -100,9 +99,8 @@ struct OKButton: View {
                 let savedIsNerdArray = UserDefaults.standard.array(forKey: "isNerdArray")
                 if savedIsNerdArray == nil || isNerdArray != savedIsNerdArray as! [Bool] {
                     UserDefaults.standard.set(isNerdArray, forKey: "isNerdArray")
-                    userAttribute.printMessage(isNerd: SharedInstance.isNerd,
-                                          messageForNerd: "User saved his/her attribute as 'Nerd'.",
-                                          messageForNonNerd: "User saved his/her attribute as 'Non-Nerd'.")
+                    userAttribute.printMessage(messageForNerd: "User saved his/her attribute as 'Nerd'.",
+                                               messageForNonNerd: "User saved his/her attribute as 'Non-Nerd'.")
                 }
             },
             label: {

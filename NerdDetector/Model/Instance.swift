@@ -11,8 +11,9 @@ class ImageClass: ObservableObject {
     @Published var image: Image?
 }
 
-class SharedInstance {
+struct SharedInstance {
     static var isNerd = false
+    static var noFaceDetected = false
     static var uiImage = UIImage()
     static var resultUiImage = UIImage()
     static var positiveScore: Double = 0.0
