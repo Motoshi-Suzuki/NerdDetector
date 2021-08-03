@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SelectionView: View {
     
-    @State private var isNerdArray: [Bool] = [false, false]
+    @State private var feelinGoodArray: [Bool] = [false, false]
     @State private var showAlert = false
     @State private var moveToHomeView = false
     let userAttribute = UserAttribute()
@@ -18,61 +18,60 @@ struct SelectionView: View {
         NavigationView {
             ZStack {
                 Form {
-                    Section(footer: Text("Choose the option that represents your personality.")) {
-                        IsNerdButtons(isNerdArray: $isNerdArray)
+                    Section(footer: Text("Choose the option that represents your current condition.")) {
+                        conditionButtons(feelinGoodArray: $feelinGoodArray)
                     }
                 }
                 
-                OKButton(isNerdArray: $isNerdArray, showAlert: $showAlert, moveToHomeView: $moveToHomeView)
+                OKButton(feelinGoodArray: $feelinGoodArray, showAlert: $showAlert, moveToHomeView: $moveToHomeView)
             
                 NavigationLink(destination: HomeView(), isActive: $moveToHomeView) {
                     EmptyView()
                 }
             }
-            .navigationBarTitle(Text("Are you a Nerd?"))
+            .navigationBarTitle(Text("How are you feeling?"))
         }
         .onAppear(perform: {
-            if let isNerd = UserDefaults.standard.array(forKey: "isNerdArray") {
-                self.moveToHomeView = true
-                isNerdArray = isNerd as! [Bool]
-                userAttribute.setAttribute(isNerdArray: isNerdArray)
-                userAttribute.printMessage(messageForNerd: "This user is Nerd.",
-                                           messageForNonNerd: "This user is not Nerd.")
+            if let feelinGood = UserDefaults.standard.array(forKey: "feelinGoodArray") {
+                self.feelinGoodArray = feelinGood as! [Bool]
+                userAttribute.setAttribute(feelinGoodArray: self.feelinGoodArray)
+                userAttribute.printMessage(messageForGood: "This user is feeling good.",
+                                           messageForBad: "This user is feeling bad.")
             } else {
-                print("Welcome to NerdDetector.")
+                print("Welcome to EmotionFinder.")
             }
         })
     }
 }
 
-struct IsNerdButtons: View {
-    @Binding var isNerdArray: [Bool]
+struct conditionButtons: View {
+    @Binding var feelinGoodArray: [Bool]
     let userAttribute = UserAttribute()
     
     var body: some View {
         Button(action: {
-            isNerdArray = [true, false]
-            userAttribute.setAttribute(isNerdArray: isNerdArray)
+            self.feelinGoodArray = [true, false]
+            userAttribute.setAttribute(feelinGoodArray: self.feelinGoodArray)
         }, label: {
             HStack {
-                Text("Yes, I'm a Nerd !!")
+                Text("Not bad !!")
                     .foregroundColor(.primary)
                 Spacer()
-                if isNerdArray == [true, false] {
+                if self.feelinGoodArray == [true, false] {
                     Image(systemName: "checkmark.circle")
                 }
             }
         })
         
         Button(action: {
-            isNerdArray = [false, true]
-            userAttribute.setAttribute(isNerdArray: isNerdArray)
+            self.feelinGoodArray = [false, true]
+            userAttribute.setAttribute(feelinGoodArray: self.feelinGoodArray)
         }, label: {
             HStack {
-                Text("Absolutely I am not a Nerd.")
+                Text("Not so good.")
                     .foregroundColor(.primary)
                 Spacer()
-                if isNerdArray == [false, true] {
+                if self.feelinGoodArray == [false, true] {
                     Image(systemName: "checkmark.circle")
                 }
             }
@@ -82,7 +81,7 @@ struct IsNerdButtons: View {
 
 struct OKButton: View {
     
-    @Binding var isNerdArray: [Bool]
+    @Binding var feelinGoodArray: [Bool]
     @Binding var showAlert: Bool
     @Binding var moveToHomeView: Bool
     let userAttribute = UserAttribute()
@@ -90,18 +89,18 @@ struct OKButton: View {
     var body: some View {
         Button(
             action: {
-                guard isNerdArray != [false, false] else {
-                    showAlert = true
+                guard self.feelinGoodArray != [false, false] else {
+                    self.showAlert = true
                     return
                 }
                 
-                moveToHomeView = true
+                self.moveToHomeView = true
                 
-                let savedIsNerdArray = UserDefaults.standard.array(forKey: "isNerdArray")
-                if savedIsNerdArray == nil || isNerdArray != savedIsNerdArray as! [Bool] {
-                    UserDefaults.standard.set(isNerdArray, forKey: "isNerdArray")
-                    userAttribute.printMessage(messageForNerd: "User saved his/her attribute as 'Nerd'.",
-                                               messageForNonNerd: "User saved his/her attribute as 'Non-Nerd'.")
+                let savedArray = UserDefaults.standard.array(forKey: "feelinGoodArray")
+                if savedArray == nil || self.feelinGoodArray != savedArray as! [Bool] {
+                    UserDefaults.standard.set(self.feelinGoodArray, forKey: "feelinGoodArray")
+                    userAttribute.printMessage(messageForGood: "User saved his/her condition as 'Good'.",
+                                               messageForBad: "User saved his/her condition as 'bad'.")
                 }
             },
             label: {

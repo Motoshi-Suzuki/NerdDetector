@@ -74,10 +74,10 @@ class Rekognition {
                             let emotionName = Emotions(rawValue: emotionTypes.rawValue)?.returnEmotionName(confidence: emotionConfidence)
                             emotionDict[emotionName!] = emotionConfidence
                         }
-                        let sortedEmotionDict = emotionDict.sorted {
+                        SharedInstance.sortedEmotionDict = emotionDict.sorted {
                             return $0.value > $1.value
                         }
-                        print("\n-----Results of Emotions-----", "\n\(sortedEmotionDict)")
+                        print("\n-----Results of Emotions-----", "\n\(SharedInstance.sortedEmotionDict)")
                         print("\nPositive Score: \(SharedInstance.positiveScore)", "\nNegative Score: \(SharedInstance.negativeScore)")
                     }
                     

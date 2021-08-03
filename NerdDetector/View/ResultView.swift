@@ -11,6 +11,7 @@ struct ResultView: View {
     
     @State private var resultImage: Image?
     @State private var message: String?
+    @State private var oparationFailed = false
     @Binding var showingAnalysingView: Bool
     @Binding var animationNumber: Int
     
@@ -20,17 +21,13 @@ struct ResultView: View {
                 .ignoresSafeArea()
             
             VStack(spacing: 50) {
-                ResultImageView(resultImage: $resultImage, animationNumber: $animationNumber)
+                ResultImageView(resultImage: $resultImage, animationNumber: $animationNumber, oparationFailed: $oparationFailed)
                 
-                VStack(spacing: 10) {
-                    Text(self.message ?? "You are xxx.")
+                VStack(spacing: 5) {
+                    Text(oparationFailed ? self.message ?? "" : "It seems you are feeling")
                         .font(.title)
-                    VStack(alignment: .leading) {
-                        Text("Positiveness  \(SharedInstance.positiveScore)")
-                            .font(.body)
-                        Text("Negativeness  \(SharedInstance.negativeScore)")
-                            .font(.body)
-                    }
+                    Text(oparationFailed ? "" : "\(self.message ?? "").")
+                        .font(.largeTitle)
                 }
             }
             .padding(.bottom, 70)
@@ -53,6 +50,7 @@ struct ResultView: View {
 struct ResultImageView: View {
     @Binding var resultImage: Image?
     @Binding var animationNumber: Int
+    @Binding var oparationFailed: Bool
     
     var body: some View {
         ZStack {
@@ -77,6 +75,8 @@ struct ResultImageView: View {
         .onAppear(perform: {
             if SharedInstance.failedToDetectFaces != true && SharedInstance.noFaceDetected != true {
                 self.resultImage = Image(uiImage: SharedInstance.resultUiImage)
+            } else {
+                self.oparationFailed = true
             }
         })
     }

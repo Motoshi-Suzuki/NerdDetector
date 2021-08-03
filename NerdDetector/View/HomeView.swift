@@ -58,7 +58,7 @@ struct HomeView: View {
             SafariView(url: URL(string: "https://www.freeprivacypolicy.com/live/6ff09052-2ca7-43b8-96f3-e5231e2be627")!)
         })
         .navigationBarBackButtonHidden(true)
-        .navigationBarTitle("Nerd Detector", displayMode: .inline)
+        .navigationBarTitle("Emotion Finder", displayMode: .inline)
         .navigationBarItems(trailing:
             Button(action: {
                 self.showingSafariView = true

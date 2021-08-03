@@ -9,21 +9,21 @@ import SwiftUI
 
 class UserAttribute {
     
-    func setAttribute(isNerdArray: [Bool]) {
-        if isNerdArray == [true, false] {
-            SharedInstance.isNerd = true
+    func setAttribute(feelinGoodArray: [Bool]) {
+        if feelinGoodArray == [true, false] {
+            SharedInstance.feelinGood = true
             
-        } else if isNerdArray == [false, true] {
-            SharedInstance.isNerd = false
+        } else if feelinGoodArray == [false, true] {
+            SharedInstance.feelinGood = false
         }
     }
     
-    func printMessage(messageForNerd: String, messageForNonNerd: String) {
-        switch SharedInstance.isNerd {
+    func printMessage(messageForGood: String, messageForBad: String) {
+        switch SharedInstance.feelinGood {
         case true:
-            print(messageForNerd)
+            print(messageForGood)
         case false:
-            print(messageForNonNerd)
+            print(messageForBad)
         }
     }
     
@@ -31,28 +31,14 @@ class UserAttribute {
         
         if SharedInstance.failedToDetectFaces != true {
             if SharedInstance.noFaceDetected != true {
-                
-                switch SharedInstance.isNerd {
-                case true:
-                    if SharedInstance.positiveScore > SharedInstance.negativeScore {
-                        return "Oh, you may not be a Nerd."
-                    } else {
-                        return "You are a real Nerd!!"
-                    }
-                case false:
-                    if SharedInstance.positiveScore > SharedInstance.negativeScore {
-                        return "You are not a Nerd."
-                    } else {
-                        return "Oh, it seems you are a Nerd."
-                    }
-                }
+                return SharedInstance.sortedEmotionDict.first?.key ?? "good"
             // if noFaceDetected == true,
             } else {
-                return "No face detected."
+                return "No face detected..."
             }
         // if failedToDetectFaces == true,
         } else {
-            return "Oops...something went wrong."
+            return "Something went wrong..."
         }
     }
 }
